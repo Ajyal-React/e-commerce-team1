@@ -4,6 +4,7 @@ export const MainContainer = styled.main`
   width: 100vw;
   max-width: 1920px;
   margin: 0 auto;
+  overflow: hidden;
 `;
 
 export const Container = styled.div`
@@ -13,11 +14,14 @@ export const Container = styled.div`
 
 export const FlexBox = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 `;
 export const FlexBoxCol = styled(FlexBox)`
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  /* border: 1px solid red; */
 `;
 
 export const StyledUl = styled.ul`
@@ -61,5 +65,14 @@ export const StyledTrendingCard = styled.div`
 export const StyledButton = styled.button`
   border-radius: ${({ borderRadius }) => borderRadius};
   background-color: ${({ bgColor }) => bgColor};
-  padding: 1rem 2rem;
+  color: ${({ color }) => color};
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border: none;
+`;
+
+export const StyledAnchor = styled.a`
+  color: ${({ color }) => color};
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
 `;
