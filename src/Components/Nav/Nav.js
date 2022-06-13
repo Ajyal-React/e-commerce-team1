@@ -9,7 +9,7 @@ import {
 import "./Nav.css";
 
 import { FaSearch } from "react-icons/fa";
-const logo = require("../../Images/logo.png");
+
 
 function Nav() {
   return (
@@ -36,7 +36,7 @@ function Nav() {
               </li>
             </FlexBox>
           </StyledUl>
-          <img src={logo} alt="logo" />
+          <img src='/Images/logo.png' alt="logo" />
 
           <StyledUl>
             <FlexBox>
