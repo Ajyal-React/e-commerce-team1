@@ -1,0 +1,36 @@
+.discount-sec {
+  background: url("../../../../public/Images/discount-lap.png") center/cover;
+  height: 280px;
+  margin-top: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.discount-sec .black-paper {
+  position: absolute;
+  z-index: -1;
+}
+
+.discount-content {
+  width: 70%;
+}
+.discount-content div {
+  height: 280px;
+}
+.discount-content h1{
+  color: #fff;
+}
+.discount-content div button {
+  border: 1px solid #fff;
+  padding: .8rem 3rem;
+}
+
+@media only screen and (max-width: 600px) and (min-width: 400px)  {
+  .discount-content div {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+ }
