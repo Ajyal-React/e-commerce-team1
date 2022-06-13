@@ -1,9 +1,8 @@
 .wrapper {
-  background: url("../../../../public/Images/Group\ 14850.png") center/cover;
+  background: url("../../../../public/Images/hero.png") center/cover;
   height: 100vh;
 }
 article{
-  /* border: 1px solid red; */
   height: 100vh;
   width: 50%;
   display: flex;

@@ -1,6 +1,6 @@
 import React from "react";
 import Nav from "../../src/Components/Nav/Nav";
-import Hero from "../../src/Components/HomePage/Hero/Hero";
+import Hero from "../Components/HomePage/Hero/Hero";
 import "../index.css";
 import { MainContainer } from "../Global.Style";
 function Home() {
