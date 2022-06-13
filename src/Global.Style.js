@@ -21,7 +21,6 @@ export const FlexBoxCol = styled(FlexBox)`
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
-  /* border: 1px solid red; */
 `;
 
 export const StyledUl = styled.ul`
