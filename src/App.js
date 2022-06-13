@@ -1,7 +1,7 @@
 import React from "react";
 // import Nav from "../src/Components/Nav/Nav";
 // import Hero from "../src/Components/Hero/Hero";
-import "./index.css";
+import "./App.css";
 // import { MainContainer } from "./Global.Style";
 import Home from "../src/Pages/Home";
 function App() {
