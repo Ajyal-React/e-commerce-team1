@@ -17,6 +17,11 @@ export const FlexBox = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
+export const Center = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 export const FlexBoxCol = styled(FlexBox)`
   flex-direction: column;
   align-items: flex-start;
@@ -48,7 +53,7 @@ export const StyledPrice = styled.div`
   font-size: ${({ fontSize }) => fontSize};
   border-radius: ${({ borderRadius }) => borderRadius};
   background-color: ${({ bgColor }) => bgColor};
-  padding: 0.2rem 0.4rem;
+  padding: 0.2rem 0.8rem;
 `;
 export const StyledImgFrame = styled.div`
   border: 1px solid #d0cece;
@@ -68,6 +73,15 @@ export const StyledButton = styled.button`
   padding: 0.5rem 1.5rem;
   cursor: pointer;
   border: none;
+`;
+export const StyledButton2 = styled.button`
+  border-radius: ${({ borderRadius }) => borderRadius};
+  background-color: ${({ bgColor }) => bgColor};
+  color: ${({ color }) => color};
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border: 1px solid #999999;
+  font-weight: 700;
 `;
 
 export const StyledAnchor = styled.a`

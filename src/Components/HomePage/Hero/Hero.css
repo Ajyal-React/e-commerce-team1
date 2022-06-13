@@ -17,8 +17,8 @@ height: 100%;
 }
 .down-arrow {
   position: absolute;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   background-color: #fff;
   left: 50%;
@@ -28,7 +28,7 @@ height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 .down-arrow:hover {
@@ -46,21 +46,11 @@ article div button{
   align-items: center;
   width: 15rem;
   height: 3rem;
-  justify-content: space-between;
+  justify-content: space-evenly;
   font-size: 1rem;
   font-weight: bold;
  }
 
  article div button:hover{
   background-color: #ABABAE;
- }
-
- @media only screen and (max-width: 600px) and (min-width: 400px)  {
-
-  article div h1 {
-    font-size: .8rem;
-  }
-  article div button {
-    width: 13rem;
-  }
  }
