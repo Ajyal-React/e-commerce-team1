@@ -11,6 +11,7 @@ nav {
 .nav-bar ul div > * a {
   padding: 0 0.6rem;
   color: #32353c;
+  font-size: .9rem;
 }
 .nav-bar ul div > * a:hover,
 .nav-bar ul div > * a:focus {
