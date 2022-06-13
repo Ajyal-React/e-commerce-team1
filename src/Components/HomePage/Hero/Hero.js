@@ -16,8 +16,8 @@ function Hero() {
       <Container>
         <article>
           <FlexBoxCol>
-            <StyledHeading fontSize="3rem">playstation 5</StyledHeading>
-            <StyledParagraph color="#fff" fontSize='1.2rem'>
+            <StyledHeading fontSize="2.2rem">playstation 5</StyledHeading>
+            <StyledParagraph color="#fff" fontSize='1rem'>
               lighting-fast download speed with super-fast ssd storage
             </StyledParagraph>
             <StyledButton borderRadius='.5rem'>Start Shopping <FaAngleDoubleRight /></StyledButton>
