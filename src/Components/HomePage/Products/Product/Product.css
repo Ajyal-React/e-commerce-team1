@@ -1,4 +1,10 @@
-
+.product {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 .product img {
   max-width: 220px;
   max-height: 220px;
