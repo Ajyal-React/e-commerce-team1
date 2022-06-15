@@ -16,6 +16,7 @@ export const FlexBox = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: .5rem;
 `;
 export const Center = styled.div`
   display: flex;
@@ -25,6 +26,7 @@ export const Center = styled.div`
 export const FlexBoxCol = styled(FlexBox)`
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: flex-start;
 `;
 
 export const StyledUl = styled.ul`
@@ -63,6 +65,7 @@ export const StyledImgFrame = styled.div`
 export const StyledTrendingCard = styled.div`
   width: 269px;
   height: 312px;
+  margin: 0.5rem;
 `;
 
 export const StyledButton = styled.button`
