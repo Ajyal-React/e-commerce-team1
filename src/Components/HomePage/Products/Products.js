@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Container,
   FlexBox,
@@ -8,7 +8,59 @@ import {
 } from "../../../Global.Style";
 import Product from "../Products/Product/Product";
 import "./Products.css";
+
+// import Swiper core and required modules
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 const store = [
+  {
+    image: "/Images/Base.png",
+    productName: "Smart watch",
+    price: "900$",
+  },
+  {
+    image: "/Images/gamepad_controller.png",
+    productName: "Games Arm",
+    price: "900$",
+  },
+  {
+    image: "/Images/mac-laptop.png",
+    productName: "Mac Laptop",
+    price: "900$",
+  },
+  {
+    image: "/Images/bag.png",
+    productName: "Back bag",
+    price: "900$",
+  },
+  {
+    image: "/Images/Base.png",
+    productName: "Smart watch",
+    price: "900$",
+  },
+  {
+    image: "/Images/gamepad_controller.png",
+    productName: "Games Arm",
+    price: "900$",
+  },
+  {
+    image: "/Images/mac-laptop.png",
+    productName: "Mac Laptop",
+    price: "900$",
+  },
+  {
+    image: "/Images/bag.png",
+    productName: "Back bag",
+    price: "900$",
+  },
   {
     image: "/Images/Base.png",
     productName: "Smart watch",
@@ -39,27 +91,41 @@ const Products = () => {
           <StyledParagraph fontSize="12px">DEVICES</StyledParagraph>
           <StyledSubHeading fontSize="26px">featured products</StyledSubHeading>
         </div>
+      </Container>
+      {/* ............. */}
+      <Swiper className="slider"
+      // install Swiper modules
+      modules={[Navigation, Pagination, A11y]}
+      spaceBetween={0}
+      slidesPerView={4}
+      navigation= {{ clickable: true}}
+      pagination={{ clickable: true}}
+
+      onSwiper={(swiper) => console.log(swiper.pagination)}
+      // onSwiper={(swiper) => console.log(swiper.pagination)}
+      onSlideChange={() => console.log('slide change')}
+      >
         <div className="products-list">
           {store.map((element) => {
             return (
-              <Product
-                imgUrl={element.image}
-                title={element.productName}
-                price={element.price}
-              />
+              <SwiperSlide>
+                <Product
+                  imgUrl={element.image}
+                  title={element.productName}
+                  price={element.price}
+                />
+              </SwiperSlide>
             );
           })}
         </div>
-        <div className="bottom-sec">
-          <div className="dots">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <StyledButton borderRadius='.4rem' bgColor='transparent' >View More</StyledButton>
-        </div>
-      </Container>
+      </Swiper>
+
+      {/* ............. */}
+      <div className="bottom-sec">
+        <StyledButton borderRadius=".4rem" bgColor="transparent">
+          View More
+        </StyledButton>
+      </div>
     </div>
   );
 };

@@ -24,7 +24,6 @@ export const Center = styled.div`
 `;
 export const FlexBoxCol = styled(FlexBox)`
   flex-direction: column;
-  align-items: flex-start;
   justify-content: space-evenly;
 `;
 
