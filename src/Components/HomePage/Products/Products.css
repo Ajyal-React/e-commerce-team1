@@ -1,39 +1,13 @@
 .products-sec {
-  margin-top: 6rem;
-  min-height: 500px;
+  margin: 3rem;
 }
 
-.products-list {
-  margin-top: 3rem;
-  display: flex;
-}
+
 .bottom-sec {
-  display: flex;
-  flex-direction: column;
-  height: 10rem;
   width: 20%;
-  justify-content: space-evenly;
-  align-items: center;
   margin: auto;
 }
-.dots {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 3rem;
-}
-.dots div {
-  width: 15px;
-  height: 15px;
-  border: 1px solid #9b9a9a;
-  border-radius: 50%;
-}
-.dots div:first-child {
-  width: 2rem;
-  border-radius: 3rem;
-  background-color: #ca5e00;
-  border: none;
-}
+
 
 .bottom-sec button {
   padding: 0.5rem 4rem;
@@ -41,4 +15,11 @@
 }
 .bottom-sec button:hover {
   background-color: #F3EFEF;
+}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  z-index: 1;
+}
+.slider {
+  margin: 2rem;
+  height: 400px;
 }
