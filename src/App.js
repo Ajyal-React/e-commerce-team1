@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import Home from "../src/Pages/Home";
 import SignUp from "./Pages/SignUp";
+// import Categories from "./Components/HomePage/Categories/Categories";
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       </Routes>
     </div>
     </Router>
+
   );
 }
 
