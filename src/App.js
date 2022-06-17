@@ -4,6 +4,7 @@ import Home from "../src/Pages/Home";
 import SignUp from "./Pages/SignUp";
 // import Categories from "./Components/HomePage/Categories/Categories";
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+
 function App() {
   return (
     <Router>
@@ -11,6 +12,9 @@ function App() {
       <Routes>
       <Route path="/" element={<Home />}/>
       <Route path="/signup" element={<SignUp />}/>
+
+
+
       </Routes>
     </div>
     </Router>
