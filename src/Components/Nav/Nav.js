@@ -6,6 +6,7 @@ import {
   StyledButton,
   StyledAnchor,
 } from "../../Global.Style";
+import { Link } from "react-router-dom";
 import "./Nav.css";
 
 import { FaSearch } from "react-icons/fa";
@@ -26,7 +27,9 @@ function Nav() {
           <StyledUl>
             <FlexBox>
               <li>
+                <Link to='/'>
                 <StyledAnchor href="#">Home</StyledAnchor>
+                </Link>
               </li>
               <li>
                 <StyledAnchor href="#">New arrival</StyledAnchor>
@@ -51,9 +54,11 @@ function Nav() {
               </li>
             </FlexBox>
           </StyledUl>
+          <Link to= '/signup'>
           <StyledButton borderRadius="3rem" bgColor="#F9F8F8" color="#FA7400">
             Sign In
           </StyledButton>
+          </Link>
         </FlexBox>
       </Container>
     </nav>

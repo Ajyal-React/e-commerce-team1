@@ -16,6 +16,16 @@
 .bottom-sec button:hover {
   background-color: #F3EFEF;
 }
+
+.swiper-pagination-horizontal > span {
+  background: transparent linear-gradient(180deg, #FA7400 0%, #7D3A00 100%) 0% 0% no-repeat padding-box;
+}
+.products-sec .swiper-initialized .swiper-initialized .swiper-pagination {
+  top: 0;
+  background-color: black;
+}
+
+
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
   z-index: 1;
 }

@@ -91,14 +91,14 @@ const Products = () => {
           <StyledSubHeading fontSize="26px">featured products</StyledSubHeading>
         </div>
       </Container>
-      <Swiper
-        className="slider"
+      <Swiper 
+        className="slider slider-products"
         // install Swiper modules
         modules={[Navigation, Pagination]}
         spaceBetween={0}
         slidesPerView={4}
         navigation={{ clickable: true }}
-        pagination={{ clickable: true }}
+        pagination={{ dynamicBullets: true, }}
       >
         <div className="products-list">
           {store.map((element) => {

@@ -16,7 +16,6 @@ export const FlexBox = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: .5rem;
 `;
 export const Center = styled.div`
   display: flex;
@@ -90,4 +89,37 @@ export const StyledAnchor = styled.a`
   color: ${({ color }) => color};
   text-decoration: none;
   padding: 0.5rem 1.5rem;
+`;
+export const LeftSectionSign = styled.div`
+  width: 36%;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #fa7400, #d96500, #b95600, #9a4800, #7d3a00);
+`;
+export const RightSectionSign = styled(Center)`
+  width: 64%;
+  height: 100vh;
+  background-color: #F3F3F3;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+`;
+export const FlexBoxColSpaceBetween = styled(FlexBoxCol)`
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+`;
+export const Input = styled.input`
+  width: 100%;
+  height: 3rem;
+  font-size: 14px;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  
+  ::placeholder {
+    color: #B9B9B9;
+  }
 `;

@@ -7,7 +7,7 @@ export const FlexBoxWrap = styled(FlexBox)`
   margin-top: 60px;
 `;
 export const TrendingSection = styled.div`
-  padding-top: 94px;
+  padding: 94px 0;
   background-color: #f9f8f8;
 `;
 export const TrendingImage = styled.img`
