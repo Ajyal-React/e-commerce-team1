@@ -93,12 +93,19 @@ export const StyledAnchor = styled.a`
 export const LeftSectionSign = styled.div`
   width: 36%;
   height: 100vh;
-  background-image: linear-gradient(to bottom, #fa7400, #d96500, #b95600, #9a4800, #7d3a00);
+  background-image: linear-gradient(
+    to bottom,
+    #fa7400,
+    #d96500,
+    #b95600,
+    #9a4800,
+    #7d3a00
+  );
 `;
 export const RightSectionSign = styled(Center)`
   width: 64%;
   height: 100vh;
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
   display: flex;
   justify-content: center;
   align-items: end;
@@ -118,8 +125,8 @@ export const Input = styled.input`
   border: none;
   border-radius: 3px;
   outline: none;
-  
+
   ::placeholder {
-    color: #B9B9B9;
+    color: #b9b9b9;
   }
 `;

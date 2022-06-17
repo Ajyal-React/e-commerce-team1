@@ -2,7 +2,6 @@ import React from "react";
 import {FlexBox} from "../Global.Style";
 import RightSection from '../Components/SignPage/RightSection'
 import LeftSection from '../Components/SignPage/LeftSection'
-// import { FaAngleDoubleRight, FaAngleDown } from "react-icons/fa";
 
 function SignUp() {
   return (
