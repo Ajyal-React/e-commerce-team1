@@ -17,6 +17,7 @@ export const FlexBox = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
+
 export const Center = styled.div`
   display: flex;
   justify-content: center;
@@ -26,6 +27,16 @@ export const FlexBoxCol = styled(FlexBox)`
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
+`;
+export const ColCenter = styled(FlexBox)`
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+export const FlexBoxColCE = styled(FlexBox)`
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const StyledUl = styled.ul`

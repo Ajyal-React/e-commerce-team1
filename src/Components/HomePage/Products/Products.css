@@ -1,4 +1,4 @@
-.products-sec {
+/* .products-sec {
   margin-top: 6rem;
   min-height: 500px;
 }
@@ -38,7 +38,8 @@
 .bottom-sec button {
   padding: 0.5rem 4rem;
   border: 1px solid #d5d5d5;
+  font-weight: bold;
 }
 .bottom-sec button:hover {
   background-color: #F3EFEF;
-}
+} */

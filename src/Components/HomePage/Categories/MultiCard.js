@@ -8,9 +8,9 @@ function MultiCard(props) {
   
 	const handleClick = () => {
 	  if (isClicked) {
-		setLikes(likes - 1);
+		setLikes(likes ==  true);
 	  } else {
-		setLikes(likes + 1);
+		setLikes(likes == false);
 	  }
 	  setIsClicked(!isClicked);
 	};
