@@ -13,6 +13,7 @@ import { FlexBox, StyledPrice, StyledSubHeading } from "../../../Global.Style";
 
 export default () => {
   return (
+    <div className="categories-wrapper">
     <Swiper
       // install Swiper modules
       modules={[Pagination, A11y, Autoplay]}
@@ -97,5 +98,6 @@ export default () => {
         </div>
       </SwiperSlide>
     </Swiper>
+    </div>
   );
 };
