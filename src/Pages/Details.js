@@ -1,22 +1,14 @@
-import React from 'react'
-import Nav from '../Components/Nav/Nav'
-import ProductDetails from '../Components/ProductDetails/ProductDetails'
-import ProductText from '../Components/ProductDetails/ProductText'
-import {  FlexBoxN } from '../Global.Style'
+import React from "react";
+import NavTwo from "../Components/NavTwo/NavTwo";
+import ProductDetails from "../Components/ProductDetails/ProductDetails";
 
 function Details() {
   return (
-    
     <div>
-            <Nav />
-         <ProductDetails /> 
-  
-            
-     
-     
-      
-      </div>
-  )
+      <NavTwo />
+      <ProductDetails />
+    </div>
+  );
 }
 
-export default Details
+export default Details;

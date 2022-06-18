@@ -1,10 +1,9 @@
 nav {
-  background-color: rgba(223, 222, 227, 0.79);
+  background-color: #ffffff;
   position: fixed;
   width: 100%;
   z-index: 10000;
-  top: 0;
-  
+  border-bottom: 1.5px solid #cacaca;
 }
 .nav-bar {
   height: 5rem;
@@ -13,7 +12,7 @@ nav {
 .nav-bar ul div > * a {
   padding: 0 0.6rem;
   color: #32353c;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 .nav-bar ul div > * a:hover,
 .nav-bar ul div > * a:focus {
@@ -26,7 +25,7 @@ nav {
 .nav-bar select {
   border: none;
   padding: 0.4rem 1rem;
-  background-color: #7B77770F;
+  background-color: #7b77770f;
   cursor: pointer;
   outline: none;
   color: #32353c;
@@ -34,8 +33,24 @@ nav {
   margin-right: 3rem;
   font-weight: bold;
 }
-.nav-bar button:hover {
-  background-color: #fa7400;
-  color: #fff;
-}
 
+.icons-section {
+  flex-basis: 200px;
+}
+.bag-icon {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(223, 222, 227, 0.79);
+  border-radius: 50%;
+  position: relative;
+}
+.counter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.3rem;
+  height: 1.3rem;
+  background-color: #fa7400;
+  border-radius: 50%;
+  color: #ffffff;
+}

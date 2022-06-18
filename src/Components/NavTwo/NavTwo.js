@@ -3,16 +3,18 @@ import {
   StyledUl,
   Container,
   FlexBox,
-  StyledButton,
+  StyledParagraph,
   StyledAnchor,
+  Center,
 } from "../../Global.Style";
-import { Link } from "react-router-dom";
-import "./Nav.css";
+import { AiOutlineHeart, AiOutlineUser } from "react-icons/ai";
+import { BsHandbagFill } from "react-icons/bs";
+// import { Link } from "react-router-dom";HiLockClosed
+import "./NavTwo.css";
 
 import { FaSearch } from "react-icons/fa";
 
-
-function Nav() {
+function NavTwo() {
   return (
     <nav>
       <Container>
@@ -27,9 +29,7 @@ function Nav() {
           <StyledUl>
             <FlexBox>
               <li>
-                <Link to='/'>
                 <StyledAnchor href="#">Home</StyledAnchor>
-                </Link>
               </li>
               <li>
                 <StyledAnchor href="#">New arrival</StyledAnchor>
@@ -39,7 +39,7 @@ function Nav() {
               </li>
             </FlexBox>
           </StyledUl>
-          <img src='/Images/logo.png' alt="logo" />
+          <img src="/Images/logo.png" alt="logo" />
 
           <StyledUl>
             <FlexBox>
@@ -54,15 +54,22 @@ function Nav() {
               </li>
             </FlexBox>
           </StyledUl>
-          <Link to= '/signup'>
-          <StyledButton borderRadius="3rem" bgColor="#F9F8F8" color="#FA7400">
-            Sign In
-          </StyledButton>
-          </Link>
+
+          <FlexBox className="icons-section">
+            <AiOutlineHeart />
+            <AiOutlineUser />
+            <StyledParagraph>0.00$</StyledParagraph>
+            <Center className="bag-icon">
+              <BsHandbagFill />
+              <Center className="counter">
+                <StyledParagraph fontSize="14px">0</StyledParagraph>
+              </Center>
+            </Center>
+          </FlexBox>
         </FlexBox>
       </Container>
     </nav>
   );
 }
 
-export default Nav;
+export default NavTwo;

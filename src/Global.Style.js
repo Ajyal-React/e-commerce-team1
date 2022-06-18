@@ -25,8 +25,8 @@ export const Center = styled.div`
 `;
 export const FlexBoxCol = styled(FlexBox)`
   flex-direction: column;
-  align-items: flex-start;
   justify-content: space-evenly;
+  align-items: flex-start;
 `;
 export const ColCenter = styled(FlexBox)`
   flex-direction: column;
@@ -53,6 +53,7 @@ export const StyledSubHeading = styled(StyledHeading)`
 `;
 export const StyledParagraph = styled.p`
   color: ${({ color }) => color};
+  margin: ${({ margin }) => margin};
   font-size: ${({ fontSize }) => fontSize};
 `;
 export const StyledHorizontalLine = styled.div`
@@ -75,6 +76,7 @@ export const StyledImgFrame = styled.div`
 export const StyledTrendingCard = styled.div`
   width: 269px;
   height: 312px;
+  margin: 0.5rem;
 `;
 
 export const StyledButton = styled.button`
@@ -99,4 +101,44 @@ export const StyledAnchor = styled.a`
   color: ${({ color }) => color};
   text-decoration: none;
   padding: 0.5rem 1.5rem;
+`;
+export const LeftSectionSign = styled.div`
+  width: 36%;
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    #fa7400,
+    #d96500,
+    #b95600,
+    #9a4800,
+    #7d3a00
+  );
+`;
+export const RightSectionSign = styled(Center)`
+  width: 64%;
+  height: 100vh;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+`;
+export const FlexBoxColSpaceBetween = styled(FlexBoxCol)`
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+`;
+export const Input = styled.input`
+  width: 100%;
+  height: 3rem;
+  font-size: 14px;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+
+  ::placeholder {
+    color: #b9b9b9;
+  }
 `;

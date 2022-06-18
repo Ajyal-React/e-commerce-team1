@@ -1,24 +1,21 @@
-import React, { useState } from "react";
 import {
   Container,
-  FlexBox,
   StyledSubHeading,
   StyledParagraph,
   StyledButton,
 } from "../../../Global.Style";
 import Product from "../Products/Product/Product";
+import "./Products.css";
 
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from "swiper/react";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+// import Swiper core and required modules
+import { Navigation, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 const store = [
   {
     image: "/Images/Base.png",
@@ -91,15 +88,15 @@ const Products = () => {
           <StyledSubHeading fontSize="26px">featured products</StyledSubHeading>
         </div>
       </Container>
-      {/* ............. */}
-      <Swiper
-      // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={50}
-      slidesPerView={3}
-      navigation= {{ clickable: true}}
-      pagination={{ clickable: true}}
 
+      <Swiper
+        className="slider slider-products"
+        // install Swiper modules
+        modules={[Navigation, Pagination]}
+        spaceBetween={0}
+        slidesPerView={4}
+        navigation={{ clickable: true }}
+        pagination={{ dynamicBullets: true }}
       >
         <div className="products-list">
           {store.map((element) => {
@@ -116,7 +113,6 @@ const Products = () => {
         </div>
       </Swiper>
 
-      {/* ............. */}
       <div className="bottom-sec">
         <StyledButton borderRadius=".4rem" bgColor="transparent">
           View More

@@ -1,14 +1,13 @@
 .product {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  height: 350px;
-  gap: 1rem;
 }
 .product img {
-  width: 100%;
-  height: 100%;
+  max-width: 220px;
+  max-height: 220px;
 }
 .product p {
   font-weight: 600;
@@ -18,4 +17,15 @@
   display: flex;
   align-items: center;
   font-weight: 600;
+}
+.image {
+  width: 220px;
+  height: 220px;
+}
+.image img{
+  width: 100%;
+  height: 100%;
+}
+.product-info  > *{
+  margin: 1rem;
 }
