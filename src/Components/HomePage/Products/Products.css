@@ -2,31 +2,33 @@
   margin: 3rem;
 }
 
-
 .bottom-sec {
   width: 20%;
   margin: auto;
 }
 
-
 .bottom-sec button {
   padding: 0.5rem 4rem;
   border: 1px solid #d5d5d5;
+  font-weight: bold;
 }
 .bottom-sec button:hover {
-  background-color: #F3EFEF;
+  background-color: #f3efef;
 }
 
 .swiper-pagination-horizontal > span {
-  background: transparent linear-gradient(180deg, #FA7400 0%, #7D3A00 100%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(180deg, #fa7400 0%, #7d3a00 100%) 0%
+    0% no-repeat padding-box;
 }
 .products-sec .swiper-initialized .swiper-initialized .swiper-pagination {
   top: 0;
   background-color: black;
 }
 
-
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
   z-index: 1;
 }
 .slider {

@@ -6,7 +6,7 @@ import {
   FaFacebook,
   FaWhatsappSquare,
 } from "react-icons/fa";
-// import {Container} from '../../../Global.Style'
+
 import {
   StyledUl,
   Container,
@@ -43,7 +43,9 @@ function Footer() {
                 </StyledParagraph>
               </li>
               <li>
-                <StyledParagraph fontSize="0.9rem" color="#646363">offers</StyledParagraph>
+                <StyledParagraph fontSize="0.9rem" color="#646363">
+                  offers
+                </StyledParagraph>
               </li>
             </StyledUl>
           </div>
@@ -51,13 +53,19 @@ function Footer() {
             <h4>Menu</h4>
             <StyledUl>
               <li>
-                <StyledParagraph fontSize="0.9rem" color="#646363">Home</StyledParagraph>
+                <StyledParagraph fontSize="0.9rem" color="#646363">
+                  Home
+                </StyledParagraph>
               </li>
               <li>
-                <StyledParagraph fontSize="0.9rem" color="#646363">New arrival</StyledParagraph>
+                <StyledParagraph fontSize="0.9rem" color="#646363">
+                  New arrival
+                </StyledParagraph>
               </li>
               <li>
-                <StyledParagraph fontSize="0.9rem" color="#646363">Mobiles</StyledParagraph>
+                <StyledParagraph fontSize="0.9rem" color="#646363">
+                  Mobiles
+                </StyledParagraph>
               </li>
             </StyledUl>
           </div>
@@ -66,13 +74,19 @@ function Footer() {
 
             <StyledUl>
               <li>
-                <StyledParagraph fontSize="0.9rem" color="#646363">Laptops</StyledParagraph>
+                <StyledParagraph fontSize="0.9rem" color="#646363">
+                  Laptops
+                </StyledParagraph>
               </li>
               <li>
-                <StyledParagraph fontSize="0.9rem" color="#646363">Headphones</StyledParagraph>
+                <StyledParagraph fontSize="0.9rem" color="#646363">
+                  Headphones
+                </StyledParagraph>
               </li>
               <li>
-                <StyledParagraph fontSize="0.9rem" color="#646363">Accessories</StyledParagraph>
+                <StyledParagraph fontSize="0.9rem" color="#646363">
+                  Accessories
+                </StyledParagraph>
               </li>
             </StyledUl>
           </div>
@@ -109,4 +123,3 @@ function Footer() {
   );
 }
 export default Footer;
-
