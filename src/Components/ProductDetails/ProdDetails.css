@@ -1,0 +1,69 @@
+.specImg{
+    height: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    border: 0.30000001192092896px solid  #00000029;;
+}
+.sImg{
+   height: 220px;
+   width: 220px;
+    }
+    .smlImg{
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0 ;        
+    }
+    .smImg{
+        width: 100px;
+        height: 100px;
+        border-radius: 9px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.30000001192092896px solid  #00000029;
+        margin: 0 5px;
+    }
+    .cont-cars{
+            display: flex;
+            flex-direction: row;
+            margin-top: 100px;
+            gap: 50px;
+    }
+    .seSection{
+        width: 40%;
+    }
+select{
+    width: 100%;
+    height: 40px;
+    margin: 10px  0; 
+    background-color: #F4F4F4;
+    border: 0.5px solid #F4F4F4;
+    border-radius: 4px;
+}
+.butn{
+    background-color: #FA7400;
+    color: white;
+    width: 100%;
+    border: none;
+    height: 40px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.mt-5{
+    margin:10px ;
+    color: #9B9A9A;
+}
+.prices{
+    color: #FA7400;
+    font-size: 20px;
+    font-weight: 700;
+}
+.Available{
+    color: #0EA965;
+    font-weight: 700;
+}
+.amg{
+    margin: 10px 0 ;
+}

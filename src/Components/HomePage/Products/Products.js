@@ -1,7 +1,5 @@
-import React, { useState } from "react";
 import {
   Container,
-  FlexBox,
   StyledSubHeading,
   StyledParagraph,
   StyledButton,
@@ -10,11 +8,10 @@ import Product from "../Products/Product/Product";
 import "./Products.css";
 
 // import Swiper core and required modules
-import { Navigation, Pagination } from "swiper";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
+// import Swiper core and required modules
+import { Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -91,14 +88,15 @@ const Products = () => {
           <StyledSubHeading fontSize="26px">featured products</StyledSubHeading>
         </div>
       </Container>
-      <Swiper 
+
+      <Swiper
         className="slider slider-products"
         // install Swiper modules
         modules={[Navigation, Pagination]}
         spaceBetween={0}
         slidesPerView={4}
         navigation={{ clickable: true }}
-        pagination={{ dynamicBullets: true, }}
+        pagination={{ dynamicBullets: true }}
       >
         <div className="products-list">
           {store.map((element) => {
@@ -123,5 +121,4 @@ const Products = () => {
     </div>
   );
 };
-
 export default Products;
