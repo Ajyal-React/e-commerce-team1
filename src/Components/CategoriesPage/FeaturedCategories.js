@@ -1,20 +1,26 @@
 import React, { useState } from "react";
+import { AiFillHeart, AiFillStar, AiOutlineShoppingCart } from "react-icons/ai";
 import {
-  Container,
   StyledSubHeading,
   StyledParagraph,
-  FlexBox,
-  StyledPrice
+  StyledPrice,
+  StyledHorizontalLine,
 } from "../../Global.Style";
-import { FlexBoxWrap, TrendingSection } from "../HomePage/Trending/Trending.style";
-// import TrendingProduct from "../Trending/TrendingProduct/TrendingProduct";
-import MultiCard from "../HomePage/Categories/MultiCard"
-import { AiFillHeart, AiFillStar, AiOutlineShoppingCart } from "react-icons/ai";
+import {
+  CategoriesContainer,
+  CategoriesCard,
+  FlexBoxWrap,
+  FlexBoxCategories,
+  ImgDiv,
+  Image,
+  HeartIcon,
+} from "./FeaturedCategoriesStyle";
+
 const store = [
   {
-    image: "/Images/Base.png",
+    image: "/Images/lap.png",
     productName: "Smart watch",
-    price: "9000000$",
+    price: "900$",
   },
   {
     image: "/Images/phone3.png",
@@ -89,65 +95,59 @@ const store = [
 ];
 
 const FeaturedCategories = () => {
-  // const [data, setData] = useState([]);
-  const [likes, setLikes] = React.useState(100);
-	const [isClicked, setIsClicked] = React.useState(false);
-  
-	const handleClick = () => {
-	  if (isClicked) {
-		setLikes(likes - 1);
-	  } else {
-		setLikes(likes + 1);
-	  }
-	  setIsClicked(!isClicked);
-	};
-  return (
-    <TrendingSection>
-      <Container>
-        <StyledSubHeading fontSize="26px">FEATURED CATEGORIES</StyledSubHeading>
+  const [data, setData] = useState([...store]);
 
-        <FlexBoxWrap>
-          {store.map((element) => {
-            return (
-              <div className="card-phone">
-              <div>
-                <AiFillHeart  className={ `i-hert ${isClicked && 'liked'}` } onClick={ handleClick }  />
-                <div className="cont-img-multi">
-                <img src={element.image} className="img-multi" alt="logo" />
-                </div>               
-        
-                <FlexBox>
-                  <StyledSubHeading fontSize="12px">{element.productName}</StyledSubHeading>
-                  <StyledPrice
-                    color="#0EA965"
-                    bgColor="white"
-                    borderRadius="5px"
-                    fontSize="8px"
-                  >
-                    $99
-                  </StyledPrice>
-                </FlexBox>
-                <hr className="lines" />
-                <FlexBox>
-                  <p className="name-cust">
-                    <AiFillStar className="ico-star" />
-                    <AiFillStar className="ico-star" />
-                    <AiFillStar className="ico-star" />
-                    <AiFillStar className="ico-star" />
-                    <AiFillStar className="ico-star" />
-                  </p>
-                  <p className="prev-price">
-                    <AiOutlineShoppingCart  className="ico-shop" />
-                  </p>
-                </FlexBox>
-              </div>
-            </div>
-              
-            );
-          })}
-        </FlexBoxWrap>
-      </Container>
-    </TrendingSection>
+  const handleClick = (event) => {
+    !event.isClicked ? (event.isClicked = true) : (event.isClicked = false);
+    setData([...data]);
+  };
+  return (
+    <CategoriesContainer>
+      <StyledSubHeading fontSize="26px">FEATURED CATEGORIES</StyledSubHeading>
+
+      <FlexBoxWrap>
+        {data.map((element) => {
+          return (
+            <CategoriesCard>
+              <ImgDiv>
+                <Image src={element.image} />
+              </ImgDiv>
+              <FlexBoxCategories>
+                <StyledParagraph>Dell Laptop</StyledParagraph>
+                <StyledPrice
+                  color="#0EA965"
+                  bgColor="#FFFFFF"
+                  borderRadius="5px"
+                >
+                  $99
+                </StyledPrice>
+              </FlexBoxCategories>
+              <StyledHorizontalLine></StyledHorizontalLine>
+              <FlexBoxCategories>
+                <div>
+                  <AiFillStar color="#F6AB27" size="18px" />
+                  <AiFillStar color="#F6AB27" size="18px" />
+                  <AiFillStar color="#F6AB27" size="18px" />
+                  <AiFillStar color="#F6AB27" size="18px" />
+                  <AiFillStar color="#F6AB27" size="18px" />
+                  <StyledParagraph fontSize="12px" color="#AFAFAF">
+                    (5)
+                  </StyledParagraph>
+                </div>
+                <AiOutlineShoppingCart color="#AFAFAF" />
+              </FlexBoxCategories>
+              <HeartIcon>
+                <AiFillHeart
+                  size="20px"
+                  color={`${element.isClicked ? "red" : "#AFAFAF"}`}
+                  onClick={() => handleClick(element)}
+                />
+              </HeartIcon>
+            </CategoriesCard>
+          );
+        })}
+      </FlexBoxWrap>
+    </CategoriesContainer>
   );
 };
 

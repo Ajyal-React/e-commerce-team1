@@ -7,11 +7,11 @@ function MultiCard(props) {
 	const [isClicked, setIsClicked] = React.useState(false);
   
 	const handleClick = () => {
-	  if (isClicked) {
-		setLikes(likes - 1);
-	  } else {
-		setLikes(likes + 1);
-	  }
+	  // if (isClicked) {
+		// setLikes(likes - 1);
+	  // } else {
+		// setLikes(likes + 1);
+	  // }
 	  setIsClicked(!isClicked);
 	};
 

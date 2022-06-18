@@ -43,10 +43,14 @@ export const StyledSubHeading = styled(StyledHeading)`
 export const StyledParagraph = styled.p`
   color: ${({ color }) => color};
   font-size: ${({ fontSize }) => fontSize};
+  display: inline-block;
 `;
 export const StyledHorizontalLine = styled.div`
-  height: 3px;
-  background-color: #707070;
+  height: 1px;
+  background-color: #AFAFAF;
+  width: 80%;
+  margin: 1rem auto;
+  opacity: .5;
 `;
 export const StyledPrice = styled.div`
   color: ${({ color }) => color};
