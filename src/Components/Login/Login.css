@@ -20,7 +20,7 @@ h3 {
     justify-content: space-between;
     position: relative;
   }
-  
+
   .input-sec  {
     color: #B9B9B9;
     background-color: #fff;
@@ -31,11 +31,7 @@ h3 {
     position: relative;
     left: -16px;
   }
-  
-  .input-sec:focus-within {
-    border: #F6921E;
-    border-left: 8px solid #F6921E !important;
-  }
+
   .form-sec form {
     display: flex;
     flex-direction: column;
@@ -65,4 +61,17 @@ h3 {
   
   .email-input {
     height: 55px;
+  }
+  .input-sec:focus-within {
+    display: flex;
+    border: #F6921E;
+    border-left: 8px solid #F6921E !important;
+  }
+  .butn_forget{
+    color: #22B9FF;
+    border: none;
+    letter-spacing: 0.7px;
+    background-color: transparent;
+    
+
   }

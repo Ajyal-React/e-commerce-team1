@@ -42,6 +42,7 @@ export const StyledSubHeading = styled(StyledHeading)`
 `;
 export const StyledParagraph = styled.p`
   color: ${({ color }) => color};
+  margin: ${({margin}) => margin};
   font-size: ${({ fontSize }) => fontSize};
 `;
 export const StyledHorizontalLine = styled.div`

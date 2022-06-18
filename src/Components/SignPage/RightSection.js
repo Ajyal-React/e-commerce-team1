@@ -7,6 +7,7 @@ import {
   Center,
   StyledParagraph,
 } from "../../Global.Style";
+import { Link } from "react-router-dom";
 
 import "./SignStyle.css";
 import { FaLongArrowAltRight } from "react-icons/fa";
@@ -41,7 +42,11 @@ function RightSection() {
             </StyledButton>
           </form>
           <div>
-            <StyledParagraph color="#707070" fontSize="15px">Already member? <span>Sign in</span></StyledParagraph>
+          <Link to = '/Login'>
+            <StyledParagraph color="#707070" fontSize="15px"  margin = "35px">Already member? <span>
+              Sign in</span>
+              </StyledParagraph>
+              </Link>
           </div>
         </div>
       </RightSectionSign>
