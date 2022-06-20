@@ -35,7 +35,10 @@ function Nav() {
                 <StyledAnchor href="#">New arrival</StyledAnchor>
               </li>
               <li>
-                <StyledAnchor href="#">Mobiles</StyledAnchor>
+              <Link to= '/Details'>
+
+<StyledAnchor href="#">Mobiles</StyledAnchor>
+</Link>
               </li>
             </FlexBox>
           </StyledUl>
@@ -50,6 +53,7 @@ function Nav() {
                 <StyledAnchor href="#">HeadPhones</StyledAnchor>
               </li>
               <li>
+
                 <StyledAnchor href="#">Accessories</StyledAnchor>
               </li>
             </FlexBox>
