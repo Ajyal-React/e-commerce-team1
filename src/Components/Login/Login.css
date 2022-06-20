@@ -75,3 +75,15 @@ h3 {
     
 
   }
+  .err{
+    color: red;
+    font-size: small  ;
+    position: absolute;
+    top: 60px;
+  }
+  .err2{
+    color: red;
+    font-size: small  ;
+    position: absolute;
+    top: 70px;
+  }
