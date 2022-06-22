@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { FlexBox } from "../../Global.Style";
 export const SignHeading = styled.h1`
   color: #fff;
   text-transform: capitalize;
@@ -22,4 +22,12 @@ export const LogoImgContainer = styled.div`
 export const LogoImg = styled.img`
  width: auto;
  height: 100%;
+`;
+export const FlexBoxSign = styled(FlexBox)`
+  
+  @media only screen and (max-width: 768px){
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;

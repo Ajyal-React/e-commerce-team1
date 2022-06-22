@@ -60,10 +60,10 @@ export const StyledParagraph = styled.p`
 `;
 export const StyledHorizontalLine = styled.div`
   height: 1px;
-  background-color: #AFAFAF;
+  background-color: #afafaf;
   width: 80%;
   margin: 1rem auto;
-  opacity: .5;
+  opacity: 0.5;
 `;
 export const StyledPrice = styled.div`
   color: ${({ color }) => color};
@@ -118,6 +118,10 @@ export const LeftSectionSign = styled.div`
     #9a4800,
     #7d3a00
   );
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+  }
 `;
 export const RightSectionSign = styled(Center)`
   width: 64%;
@@ -126,6 +130,14 @@ export const RightSectionSign = styled(Center)`
   display: flex;
   justify-content: center;
   align-items: end;
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 0;
+  }
 `;
 export const FlexBoxColSpaceBetween = styled(FlexBoxCol)`
   justify-content: space-evenly;

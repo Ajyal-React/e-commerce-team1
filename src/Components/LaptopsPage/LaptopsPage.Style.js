@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { FlexBox, Container, Center } from "../../Global.Style";
-// import { FlexBox } from "../HomePage/Trending/Trending.style"
 export const FlexBoxWrap = styled(FlexBox)`
   flex-wrap: wrap;
   justify-content: space-between;
@@ -20,11 +19,9 @@ export const CategoriesCard = styled.div`
   min-height: 436px;
   background-color: #F9F8F8;
   border-radius: 5px;
-  border: 1px solid red;
   position: relative;
 `;
 export const ImgDiv = styled(FlexBoxCategories)`
-  border: 1px solid green;
   height: 325px;
   width : 325px;
 `;

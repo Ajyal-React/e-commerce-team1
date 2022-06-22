@@ -1,12 +1,13 @@
 import React from "react";
-import NavTwo from "../Components/NavTwo/NavTwo";
+import Nav from "../Components/Nav/Nav";
 import ProductDetails from "../Components/ProductDetails/ProductDetails";
-
+import Footer from "../Components/Footer/Footer";
 function Details() {
   return (
     <div>
-      <NavTwo />
+      <Nav />
       <ProductDetails />
+      <Footer />
     </div>
   );
 }

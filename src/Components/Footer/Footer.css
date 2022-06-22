@@ -1,24 +1,22 @@
-
 .main {
   height: 333px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 40px;
-
 }
 .contant {
   width: 25%;
   height: 100%;
 }
-.contant .preg{
-    font-size: 0.7rem;
-    text-align: left;
-    color: #302F2F;
-    width: 333px;
-    height: 100px;
-    padding: 10px;
-} 
+.contant .preg {
+  font-size: 0.7rem;
+  text-align: left;
+  color: #302f2f;
+  width: 333px;
+  height: 100px;
+  padding: 10px;
+}
 .liset_item {
   height: 100%;
 }
@@ -34,8 +32,8 @@
 .liset_item ul li {
   margin: 1rem 0;
 }
-.liset_item  h4{
-    color: #302F2F;
+.liset_item h4 {
+  color: #302f2f;
 }
 .icon_content {
   display: flex;
@@ -47,16 +45,15 @@
 
 .endSection {
   display: flex;
-  border-top: 1px solid #AFAFAF;
-  padding-top: 2rem ;
+  border-top: 1px solid #afafaf;
+  padding-top: 2rem;
   justify-content: space-between;
-  
 }
 .endSection .icon {
   display: flex;
   justify-content: space-between;
   width: 50px;
 }
-.icon_content p{
-    color: #646363;
+.icon_content p {
+  color: #646363;
 }

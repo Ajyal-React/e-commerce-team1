@@ -1,67 +1,54 @@
 import React from "react";
-import {
-  StyledUl,
-  Container,
-  FlexBox,
-  StyledButton,
-  StyledAnchor,
-} from "../../Global.Style";
+import { StyledUl, Container, FlexBox, StyledButton } from "../../Global.Style";
+import { Bars, StyledUlNav, SelectLang } from "./Nav.Style";
 import { Link } from "react-router-dom";
 import "./Nav.css";
 
-import { FaSearch } from "react-icons/fa";
-
+import { FaSearch, FaBars } from "react-icons/fa";
 
 function Nav() {
   return (
     <nav>
       <Container>
         <FlexBox className="nav-bar">
-          <FlexBox>
-            <select>
-              <option value="English">English</option>
-              <option value="Arabic">Arabic</option>
-            </select>
-            <FaSearch />
-          </FlexBox>
-          <StyledUl>
+        <Bars>
+          <FaBars />
+        </Bars>
+          <SelectLang>
+            <FlexBox>
+              <select>
+                <option value="English">English</option>
+                <option value="Arabic">Arabic</option>
+              </select>
+              <FaSearch />
+            </FlexBox>
+          </SelectLang>
+          <StyledUlNav>
             <FlexBox>
               <li>
-                <Link to='/'>
-                <StyledAnchor href="#">Home</StyledAnchor>
-                </Link>
+                <Link to="/">Home</Link>
               </li>
+              <li>New arrival</li>
               <li>
-                <StyledAnchor href="#">New arrival</StyledAnchor>
-              </li>
-              <li>
-              <Link to= '/Details'>
-
-<StyledAnchor href="#">Mobiles</StyledAnchor>
-</Link>
+                <Link to="/Details">Mobiles</Link>
               </li>
             </FlexBox>
-          </StyledUl>
-          <img src='/Images/logo.png' alt="logo" />
+          </StyledUlNav>
+          <img src="/Images/logo.png" alt="logo" />
 
-          <StyledUl>
+          <StyledUlNav>
             <FlexBox>
               <li>
-                <StyledAnchor href="#">Laptops</StyledAnchor>
+                <Link to="/laptops">Laptops</Link>
               </li>
-              <li>
-                <StyledAnchor href="#">HeadPhones</StyledAnchor>
-              </li>
-              <li>
-
-                <StyledAnchor href="#">Accessories</StyledAnchor>
-              </li>
+              <li>HeadPhones</li>
+              <li>Accessories</li>
             </FlexBox>
-          </StyledUl>
-          <Link to= '/signup'>
-          <StyledButton borderRadius="3rem" bgColor="#F9F8F8" color="#FA7400">
-            Sign In
-          </StyledButton>
+          </StyledUlNav>
+          <Link to="/signup">
+            <StyledButton borderRadius="3rem" bgColor="#F9F8F8" color="#FA7400">
+              Sign In
+            </StyledButton>
           </Link>
         </FlexBox>
       </Container>
