@@ -1,3 +1,5 @@
+import React, {useState, useEffect} from "react";
+import axios from 'axios';
 import {
   Container,
   StyledSubHeading,
@@ -16,70 +18,21 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-const store = [
-  {
-    image: "/Images/Base.png",
-    productName: "Smart watch",
-    price: "900$",
-  },
-  {
-    image: "/Images/gamepad_controller.png",
-    productName: "Games Arm",
-    price: "900$",
-  },
-  {
-    image: "/Images/mac-laptop.png",
-    productName: "Mac Laptop",
-    price: "900$",
-  },
-  {
-    image: "/Images/bag.png",
-    productName: "Back bag",
-    price: "900$",
-  },
-  {
-    image: "/Images/Base.png",
-    productName: "Smart watch",
-    price: "900$",
-  },
-  {
-    image: "/Images/gamepad_controller.png",
-    productName: "Games Arm",
-    price: "900$",
-  },
-  {
-    image: "/Images/mac-laptop.png",
-    productName: "Mac Laptop",
-    price: "900$",
-  },
-  {
-    image: "/Images/bag.png",
-    productName: "Back bag",
-    price: "900$",
-  },
-  {
-    image: "/Images/Base.png",
-    productName: "Smart watch",
-    price: "900$",
-  },
-  {
-    image: "/Images/gamepad_controller.png",
-    productName: "Games Arm",
-    price: "900$",
-  },
-  {
-    image: "/Images/mac-laptop.png",
-    productName: "Mac Laptop",
-    price: "900$",
-  },
-  {
-    image: "/Images/bag.png",
-    productName: "Back bag",
-    price: "900$",
-  },
-];
+
 
 const Products = () => {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    const API_URl = 'https://omar-tech-store.herokuapp.com/api/products/featured-products';
+    
+   axios.get(API_URl)
+  .then(response => {
+    console.log(response)
+    setProducts([...response.data])
+  });
+    
+  }, []); 
+ 
   return (
     <div className="products-sec">
       <Container>
@@ -99,12 +52,12 @@ const Products = () => {
         pagination={{ dynamicBullets: true }}
       >
         <div className="products-list">
-          {store.map((element) => {
+          {products.map((element) => {
             return (
               <SwiperSlide>
                 <Product
-                  imgUrl={element.image}
-                  title={element.productName}
+                  imgUrl={element.images}
+                  title={element.name}
                   price={element.price}
                 />
               </SwiperSlide>

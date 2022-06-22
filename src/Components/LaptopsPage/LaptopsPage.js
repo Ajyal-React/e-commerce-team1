@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { AiFillHeart, AiFillStar, AiOutlineShoppingCart } from "react-icons/ai";
 import {
   StyledSubHeading,
@@ -14,112 +15,43 @@ import {
   ImgDiv,
   Image,
   HeartIcon,
-} from "./FeaturedCategoriesStyle";
+} from "./LaptopsPage.Style";
 
-const store = [
-  {
-    image: "/Images/lap.png",
-    productName: "Smart watch",
-    price: "900$",
-  },
-  {
-    image: "/Images/phone3.png",
-    productName: "Games Arm",
-    price: "900$",
-  },
-  {
-    image: "/Images/mac-laptop.png",
-    productName: "Mac Laptop",
-    price: "900$",
-  },
-  {
-    image: "/Images/bag.png",
-    productName: "Back bag",
-    price: "900$",
-  },
-  {
-    image: "/Images/phone4.png",
-    productName: "phone",
-    price: "900$",
-  },
-  {
-    image: "/Images/gamepad_controller.png",
-    productName: "Games Arm",
-    price: "900$",
-  },
-  {
-    image: "/Images/mac-laptop.png",
-    productName: "Mac Laptop",
-    price: "900$",
-  },
-  {
-    image: "/Images/bag.png",
-    productName: "Back bag",
-    price: "900$",
-  },
-  {
-    image: "/Images/phone3.png",
-    productName: "phone",
-    price: "900$",
-  },
-  {
-    image: "/Images/gamepad_controller.png",
-    productName: "Games Arm",
-    price: "900$",
-  },
-  {
-    image: "/Images/mac-laptop.png",
-    productName: "Mac Laptop",
-    price: "900$",
-  },
-  {
-    image: "/Images/bag.png",
-    productName: "Back bag",
-    price: "900$",
-  },
-  {
-    image: "/Images/gamepad_controller.png",
-    productName: "Games Arm",
-    price: "900$",
-  },
-  {
-    image: "/Images/bag.png",
-    productName: "Back bag",
-    price: "900$",
-  },
-  {
-    image: "/Images/phone3.png",
-    productName: "phone",
-    price: "900$",
-  },
-];
+const LaptopsPage = () => {
+  const [laptops, setLaptops] = useState([]);
+  useEffect(() => {
+    const API_URl =
+      "https://omar-tech-store.herokuapp.com/api/products/category/LAPTOPS";
 
-const FeaturedCategories = () => {
-  const [data, setData] = useState([...store]);
+    axios.get(API_URl).then((response) => {
+      console.log(response);
+      setLaptops([...response.data.products]);
+    });
+  });
 
   const handleClick = (event) => {
     !event.isClicked ? (event.isClicked = true) : (event.isClicked = false);
-    setData([...data]);
+    // setData([...data]);
   };
   return (
     <CategoriesContainer>
       <StyledSubHeading fontSize="26px">FEATURED CATEGORIES</StyledSubHeading>
 
       <FlexBoxWrap>
-        {data.map((element) => {
+        {laptops.map((element) => {
           return (
             <CategoriesCard>
               <ImgDiv>
-                <Image src={element.image} />
+                <Image src={element.images[0]} />
               </ImgDiv>
               <FlexBoxCategories>
-                <StyledParagraph>Dell Laptop</StyledParagraph>
+                <StyledParagraph>{element.brand}</StyledParagraph>
                 <StyledPrice
                   color="#0EA965"
                   bgColor="#FFFFFF"
                   borderRadius="5px"
                 >
-                  $99
+                  {element.price}
                 </StyledPrice>
               </FlexBoxCategories>
               <StyledHorizontalLine></StyledHorizontalLine>
@@ -151,4 +83,4 @@ const FeaturedCategories = () => {
   );
 };
 
-export default FeaturedCategories;
+export default LaptopsPage;
