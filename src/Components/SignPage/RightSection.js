@@ -14,6 +14,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import { Formik } from "formik";
 import * as yup from "yup";
+import axios from 'axios';
 
 function RightSection() {
 	let schema = yup.object().shape({
@@ -31,6 +32,10 @@ function RightSection() {
 			.string().required("Confirm Password required")
 			.oneOf([yup.ref("password"), null], "Passwords must match"),
 	});
+	const signreq = async(values) =>{ 	
+		await axios.post('https://omar-tech-store.herokuapp.com/api/users/signup',  values );
+		localStorage.setItem(values.data.token);
+}
 	return (
 		<IconContext.Provider value={{ className: "react-icons" }}>
 			<RightSectionSign>
@@ -38,13 +43,8 @@ function RightSection() {
 					<Formik
 						initialValues={{ email: "", password: "", passwordConfirmation: "" }}
 						validationSchema={schema}
-						onSubmit={(values, { setSubmitting }) => {
-							setTimeout(() => {
-								alert(JSON.stringify(values, null, 2));
-								setSubmitting(false);
-							}, 400);
-						}}
-					>
+						onSubmit={signreq}
+						>
 						{({
 							values,
 							errors,
