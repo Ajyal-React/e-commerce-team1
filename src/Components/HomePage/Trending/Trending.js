@@ -16,11 +16,10 @@ const Trending = () => {
     
    axios.get(API_URl)
   .then(response => {
-    console.log(response)
     setTrending([...response.data])
   });
     
-  }); 
+  }, {}); 
   return (
     <TrendingSection>
       <Container>

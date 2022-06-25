@@ -22,7 +22,7 @@ h3::before{
 }
 
 
-.input-sec  {
+/* .input-sec  {
   color: #B9B9B9;
   background-color: #fff;
   box-shadow: 0px 12px 20px #00000014;
@@ -31,16 +31,16 @@ h3::before{
   padding: 2px;
   position: relative;
   left: -16px;
-}
+} */
 
-.input-sec:focus-within {
+/* .input-sec:focus-within {
   border: #F6921E;
   border-left: 8px solid #F6921E !important;
-}
-.form-sec form {
+} */
+/* .form-sec form {
   display: flex;
   flex-direction: column;
-}
+} */
 .form-sec button {
 align-self: flex-end;
 }
@@ -52,10 +52,10 @@ align-self: flex-end;
   font-size: 1.2rem;
   margin-left: 1rem;
 }
-.form-sec button:hover{
+/* .form-sec button:hover{
   font-weight: bold;
   color: #000000;
-}
+} */
 .form-sec button:hover .react-icons{
   margin-left: 2rem;
 }
@@ -64,11 +64,11 @@ p span {
   color: #3B3B3B;
 }
 
-.email-input {
+/* .email-input {
   height: 55px;
-}
+} */
 
-.erors{
+.error{
   color: red;
   font-size: small;
   position: absolute;
