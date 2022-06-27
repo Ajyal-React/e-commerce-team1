@@ -13,7 +13,7 @@ import TextField from "../SignPage/TextField";
 import "./Login.css";
 import { Formik, Form } from "formik";
 import * as yup from "yup";
-import {useDispatch} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux';
 import {SignInAction} from '../../Redux/user/actions'
 function RightSection() {
   const validate = yup.object({
@@ -21,7 +21,8 @@ function RightSection() {
     password: yup.string().required("Password is Required"),
   });
   const dispatch = useDispatch();
-
+  const isSuccess = useSelector(state => state.user.data);
+  
   return (
     <IconContext.Provider value={{ className: "react-icons" }}>
       <RightSectionSign>
@@ -47,6 +48,7 @@ function RightSection() {
                   name="email"
                   type="email"
                 />
+                {isSuccess ? <p style={{color: 'red'}}>{isSuccess.message.split(':')[1]}</p> : null}
                 <ConfirmPassDiv>
                   <TextField
                     placeholder="  &#128274; Password"
