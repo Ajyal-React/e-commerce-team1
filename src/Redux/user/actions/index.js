@@ -14,8 +14,12 @@ export const SignInAction = (values) => {
         type: USER_SIGN_IN,
         payload: res.data,
       });
-    } catch (error) {
-      console.log("error", error);
+    } catch ({response}) {
+      console.log("error", response.data);
+      dispatch({
+        type: USER_SIGN_IN,
+        payload: response,
+      });
     }
   };
 };
@@ -33,8 +37,12 @@ export const SignUpAction = (values) => {
         type: USER_SIGN_UP,
         payload: res.data,
       });
-    } catch (error) {
-      console.log("error", error);
+    } catch ({response}) {
+      console.log("error", response.data);
+      dispatch({
+        type: USER_SIGN_UP,
+        payload: response,
+      });
     }
   };
 };

@@ -12,7 +12,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import { Formik, Form } from "formik";
 import * as yup from "yup";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {SignUpAction} from '../../Redux/user/actions'
 function RightSection() {
   const validate = yup.object({
@@ -31,7 +31,8 @@ function RightSection() {
   });
 
   const dispatch = useDispatch();
-
+  const isSuccess = useSelector(state => state.user.data);
+  console.log(isSuccess)
   return (
     <IconContext.Provider value={{ className: "react-icons" }}>
       <RightSectionSign>
@@ -45,7 +46,6 @@ function RightSection() {
             validationSchema={validate}
             onSubmit={
               (values) => {
-                console.log(values)
                 dispatch(SignUpAction(values))
               }
             }
@@ -58,6 +58,7 @@ function RightSection() {
                   name="email"
                   type="email"
                 />
+                {isSuccess ? <p style={{color: 'red'}}>{isSuccess.message.split(':')[1]}</p> : null}
                 <TextField
                   placeholder="  &#128274; Password"
                   name="password"
