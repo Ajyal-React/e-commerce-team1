@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import {
   RightSectionSign,
   StyledButton,
@@ -13,40 +13,33 @@ import { IconContext } from "react-icons";
 import { Link } from "react-router-dom";
 import TextField from "../SignPage/TextField";
 import "./Login.css";
-import axios from "axios";
 import { Formik, Form } from "formik";
 import * as yup from "yup";
-
+import {useDispatch} from 'react-redux'
+import {SignInAction} from '../../Redux/user/actions'
 function RightSection() {
   const validate = yup.object({
     email: yup.string().email().required("Email is Required"),
     password: yup.string().required("Password is Required"),
   });
-  const handleLoginUserData = (values) => {
-    const USER_API = "https://omar-tech-store.herokuapp.com/api/users/login";
+  const dispatch = useDispatch();
 
-    axios
-      .post(USER_API, { ...values })
-      .then((res) => {
-        localStorage.setItem("token", res.data.token);
-        console.log(res.data.token);
-        console.log(res);
-      })
-      .catch((err) => console.log(err));
-  };
   return (
     <IconContext.Provider value={{ className: "react-icons" }}>
       <RightSectionSign>
         <div className="form-sec">
           <Formik
             initialValues={{
-              email: "omarAlhafni@gmail.com",
-              password: "omarAlhafni@123456",
+              email: "mahmoud@hammad.com",
+              password: "Mahmoud!123",
             }}
             validationSchema={validate}
-            onSubmit={(values) => {
-              handleLoginUserData(values);
-            }}
+            onSubmit={
+              (values) => {
+                // console.log(values)
+                dispatch(SignInAction(values))
+              }
+            }
           >
             {() => (
               <Form>

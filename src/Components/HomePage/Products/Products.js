@@ -27,7 +27,6 @@ const Products = () => {
     
    axios.get(API_URl)
   .then(response => {
-    console.log(response)
     setProducts([...response.data])
   });
     

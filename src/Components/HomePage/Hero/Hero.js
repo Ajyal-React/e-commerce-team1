@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {
   Container,
   FlexBoxCol,
@@ -8,8 +8,12 @@ import {
 } from "../../../Global.Style";
 import "./Hero.css";
 import { FaAngleDoubleRight, FaAngleDown } from "react-icons/fa";
-
+// import {useSelector} from 'react-redux'
 function Hero() {
+  // const data = useSelector(store => store);
+  // useEffect({
+    
+  // }, [])
   return (
     <div className="wrapper">
       <div className="black-paper"></div>

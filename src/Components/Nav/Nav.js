@@ -1,12 +1,12 @@
 import React from "react";
 import UserControlBar from './UserControlBar'
-import { StyledUl, Container, FlexBox, StyledButton } from "../../Global.Style";
+import { Container, FlexBox, StyledButton } from "../../Global.Style";
 import { Bars, StyledUlNav, SelectLang, Li } from "./Nav.Style";
 import { Link } from "react-router-dom";
 import { FaSearch, FaBars } from "react-icons/fa";
-
+import {useSelector} from 'react-redux';
 function Nav() {
-  const userIsLoggedIn = localStorage.getItem('token')
+  const isLoggedIn = useSelector(state => state.user.token);
   return (
     <nav>
       <Container>
@@ -46,7 +46,7 @@ function Nav() {
             </FlexBox>
           </StyledUlNav>
           
-          {userIsLoggedIn?  <UserControlBar />
+          {isLoggedIn?  <UserControlBar />
           :
           <Link to="/signup">
             <StyledButton borderRadius="3rem" bgColor="#F9F8F8" color="#FA7400">

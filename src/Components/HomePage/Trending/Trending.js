@@ -19,7 +19,7 @@ const Trending = () => {
     setTrending([...response.data])
   });
     
-  }, {}); 
+  }, []); 
   return (
     <TrendingSection>
       <Container>
