@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import {
   RightSectionSign,
   StyledButton,
@@ -13,15 +12,9 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import { Formik, Form } from "formik";
 import * as yup from "yup";
-import axios from 'axios';
-
-
+import { useDispatch } from "react-redux";
+import {SignUpAction} from '../../Redux/user/actions'
 function RightSection() {
-  const [user, setUser] = useState({
-		email: "",
-		password: "",
-		passwordConfirmation: ""
-	});
   const validate = yup.object({
     email: yup.string().email().required("Email is Required"),
     password: yup
@@ -36,17 +29,8 @@ function RightSection() {
       .required("Confirm Password required")
       .oneOf([yup.ref("password"), null], "Passwords must match"),
   });
-	const handlePostUserData = (values) => {
-		setUser({ ...values });
-		console.log({...values});
-		const USER_API = 'https://omar-tech-store.herokuapp.com/api/users/signup';
-		
-		axios.post(USER_API, {...values})
-		.then(res => console.log(res))
-		.catch(err => console.log(err))
-		// console.log(user);
-		
-	}
+
+  const dispatch = useDispatch();
 
   return (
     <IconContext.Provider value={{ className: "react-icons" }}>
@@ -59,9 +43,12 @@ function RightSection() {
               passwordConfirmation: "",
             }}
             validationSchema={validate}
-            onSubmit={(values) => {
-							handlePostUserData(values)
-            }}
+            onSubmit={
+              (values) => {
+                console.log(values)
+                dispatch(SignUpAction(values))
+              }
+            }
           >
             {() => (
               <Form>
