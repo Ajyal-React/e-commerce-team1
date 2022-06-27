@@ -1,10 +1,8 @@
-// import React, { useState } from "react";
 import {
   RightSectionSign,
   StyledButton,
   Center,
   StyledParagraph,
-  FlexBox,
 } from "../../Global.Style";
 import { ConfirmPassDiv, ForgetBtn } from "../SignPage/SignPage.Style";
 import "../SignPage/SignPage.Style";
