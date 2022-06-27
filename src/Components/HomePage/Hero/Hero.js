@@ -20,7 +20,7 @@ function Hero() {
             <StyledParagraph color="#fff" fontSize='1rem'>
               lighting-fast download speed with super-fast ssd storage
             </StyledParagraph>
-            <StyledButton borderRadius='.5rem'>Start Shopping <FaAngleDoubleRight /></StyledButton>
+            <StyledButton bgColor="#FFFFFF" borderRadius='.5rem'>Start Shopping <FaAngleDoubleRight /></StyledButton>
           </FlexBoxCol>
         </article>
       </Container>
