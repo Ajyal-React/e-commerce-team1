@@ -1,1 +1,1 @@
-// export const GET = 'GET'
+export const  FEATURED_PRODUCT= "USER_SIGN_IN";

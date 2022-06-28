@@ -1,6 +1,7 @@
 import axios from "axios";
 import { USER_SIGN_IN, USER_SIGN_UP} from "../userTypes";
 
+
 export const SignInAction = (values) => {
   return async (dispatch) => {
     try {
@@ -8,7 +9,6 @@ export const SignInAction = (values) => {
         "https://omar-tech-store.herokuapp.com/api/users/login",
         values
       );
-
       localStorage.setItem("user", JSON.stringify(res.data));
       dispatch({
         type: USER_SIGN_IN,

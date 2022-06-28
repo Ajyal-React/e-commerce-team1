@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from "react";
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import {
   Container,
   StyledSubHeading,
@@ -8,6 +8,8 @@ import {
 } from "../../../Global.Style";
 import Product from "../Products/Product/Product";
 import "./Products.css";
+import { useDispatch } from "react-redux";
+import { FEATURED_PRODUCT } from "../../../Redux/products/productType";
 
 // import Swiper core and required modules
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -19,19 +21,21 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
+// const dispatch = useDispatch();
 
 const Products = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    const API_URl = 'https://omar-tech-store.herokuapp.com/api/products/featured-products';
-    
-   axios.get(API_URl)
-  .then(response => {
-    setProducts([...response.data])
-  });
-    
-  }, []); 
- 
+    const API_URl =
+      "https://omar-tech-store.herokuapp.com/api/products/featured-products";
+    axios.get(API_URl).then((response) => {
+      setProducts([...response.data]);
+      // dispatch(FEATURED_PRODUCT());
+    });
+  }, []);
+
+  const dispatch = useDispatch();
+
   return (
     <div className="products-sec">
       <Container>
