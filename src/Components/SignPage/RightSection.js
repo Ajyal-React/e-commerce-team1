@@ -32,7 +32,6 @@ function RightSection() {
 
   const dispatch = useDispatch();
   const isSuccess = useSelector(state => state.user.data);
-  console.log(isSuccess)
   return (
     <IconContext.Provider value={{ className: "react-icons" }}>
       <RightSectionSign>

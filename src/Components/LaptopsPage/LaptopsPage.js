@@ -24,7 +24,6 @@ const LaptopsPage = () => {
       "https://omar-tech-store.herokuapp.com/api/products/category/LAPTOPS";
 
     axios.get(API_URl).then((response) => {
-      console.log(response);
       setLaptops([...response.data.products]);
     });
   });

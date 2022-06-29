@@ -15,6 +15,8 @@ import { Formik, Form } from "formik";
 import * as yup from "yup";
 import {useDispatch, useSelector} from 'react-redux';
 import {SignInAction} from '../../Redux/user/actions'
+
+
 function RightSection() {
   const validate = yup.object({
     email: yup.string().email().required("Email is Required"),
@@ -22,6 +24,8 @@ function RightSection() {
   });
   const dispatch = useDispatch();
   const isSuccess = useSelector(state => state.user.data);
+  console.log(isSuccess);
+
   
   return (
     <IconContext.Provider value={{ className: "react-icons" }}>
@@ -35,7 +39,6 @@ function RightSection() {
             validationSchema={validate}
             onSubmit={
               (values) => {
-                // console.log(values)
                 dispatch(SignInAction(values))
               }
             }

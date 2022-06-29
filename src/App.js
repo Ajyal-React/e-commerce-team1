@@ -6,8 +6,10 @@ import SignUp from "./Pages/SignUp";
 import Details from "./Pages/Details";
 import Laptops from "./Pages/Laptops"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Loader from "./GlobalUtil/Loader";
 
 function App() {
+  
   return (
     <Router>
       <div className="App">
