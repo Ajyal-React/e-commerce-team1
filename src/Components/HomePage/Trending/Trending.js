@@ -11,6 +11,7 @@ import TrendingProduct from "../Trending/TrendingProduct/TrendingProduct";
 import { useSelector, useDispatch } from "react-redux";
 import { TrendingAct } from "../../../Redux/products/actions/Trending-Act";
 import Loader from "../../../GlobalUtil/Loader";
+import { Link } from "react-router-dom";
 
 const Trending = () => {
 	const trending = useSelector((store) => store.Trending);
@@ -18,6 +19,7 @@ const Trending = () => {
 	useEffect(() => {
 		dispatch(TrendingAct());
 	}, []);
+	console.log(trending.data);
 	return (
 		<TrendingSection>
 			<Container>
@@ -25,11 +27,20 @@ const Trending = () => {
 				<StyledSubHeading fontSize="26px">TRENDING THIS WEEK</StyledSubHeading>
 
 				<FlexBoxWrap>
-					 {trending.loading
-						? <Loader />
-						: trending.data.map(el => (
-								<TrendingProduct imgUrl={el.images} title={el.name} price={el.price} />
-						  ))} 
+					{trending.loading ? (
+						<Loader />
+					) : (
+						trending.data.map((el) => (
+							<Link to={`/details/${el._id}`}>
+								<TrendingProduct
+									imgUrl={el.images}
+									title={el.name}
+									price={el.price}
+									id={el._id}
+								/>
+							</Link>
+						))
+					)}
 				</FlexBoxWrap>
 			</Container>
 		</TrendingSection>

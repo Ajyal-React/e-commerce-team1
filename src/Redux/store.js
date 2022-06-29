@@ -4,12 +4,14 @@ import { HeroReducer } from "./products/reducers/HeroReduc";
 import { FeaturedRed } from "./products/reducers/featured-categ-red";
 import {userReducer} from './user/reducers';
 import { TrendingRed } from "./products/reducers/Trending-Red";
+import { DetailsRed } from "./products/reducers/Details-Red";
 
 const allReducers = combineReducers({
   user: userReducer,
   Hero : HeroReducer,
   Featured : FeaturedRed,
-  Trending : TrendingRed
+  Trending : TrendingRed,
+  Details : DetailsRed
 });
 
 const initialStore = {

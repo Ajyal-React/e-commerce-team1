@@ -7,6 +7,7 @@ import Details from "./Pages/Details";
 import Laptops from "./Pages/Laptops"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Loader from "./GlobalUtil/Loader";
+import Error from "./Pages/Error";
 
 function App() {
   
@@ -17,8 +18,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<LOGIN />} />
-          <Route path="/Details" element={<Details />} />
+          <Route path="/details/:id" element={<Details />} />
           <Route path="/laptops" element={<Laptops />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </div>
     </Router>

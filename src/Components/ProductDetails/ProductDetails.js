@@ -1,62 +1,45 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { Container, FlexBoxN } from "../../Global.Style";
 import "./ProdDetails.css";
 import ProductText from "./ProductText";
-
+import { useSelector, useDispatch } from "react-redux";
+import { DetailsAct } from "../../Redux/products/actions/Details-Act";
 function ProductDetails() {
-	const [data, setData] = useState("/Images/phones.png");
+	const datas = useSelector((store) => store.Details);
+	const dispatch = useDispatch();
 	function handleImg(e) {
 		setData(e.target.src);
 	}
+
+	let {id} = useParams();
+	
+	useEffect(() => {
+		dispatch(DetailsAct(id));
+		}, []);
+		
+	const [data, setData] = useState("");
+
 	return (
 		<Container>
       <div  className="cont-cars">
-			<div >
+			<div className="sec-lef">
+
 				<div className="specImg">
 					<img src={data} className="sImg" />
 				</div>
 				<div className="smlImg">
-					<div className="smImg">
+				{datas.loading ? "load " : datas.data.images.map(el  =><div className="smImg">
 						<img
-							src="/Images/phone2.png"
+							src={el}
 							width="110px"
 							height="100px"
 							onClick={(e) => handleImg(e)}
 						/>
-					</div>
-					<div className="smImg">
-						<img
-							src="/Images/phone3.png"
-							width="110px"
-							height="100px"
-							onClick={(e) => handleImg(e)}
-						/>
-					</div>
-					<div className="smImg">
-						<img
-							src="/Images/phone4.png"
-							width="110px"
-							height="100px"
-							onClick={(e) => handleImg(e)}
-						/>
-					</div>
+					</div> )}
 
-					<div className="smImg">
-						<img
-							src="/Images/phone1.png"
-							width="110px"
-							height="100px"
-							onClick={(e) => handleImg(e)}
-						/>
-					</div>
-					<div className="smImg">
-						<img
-							src="/Images/phone4.png"
-							width="110px"
-							height="100px"
-							onClick={(e) => handleImg(e)}
-						/>
-					</div>
+				
+			
 				</div>
 			</div>
       <div className="seSection">
