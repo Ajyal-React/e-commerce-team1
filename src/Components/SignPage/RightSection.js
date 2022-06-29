@@ -13,7 +13,7 @@ import { IconContext } from "react-icons";
 import { Formik, Form } from "formik";
 import * as yup from "yup";
 import { useDispatch, useSelector } from "react-redux";
-import {SignUpAction} from '../../Redux/user/actions'
+import { SignUpAction } from "../../Redux/user/actions";
 function RightSection() {
   const validate = yup.object({
     email: yup.string().email().required("Email is Required"),
@@ -31,7 +31,7 @@ function RightSection() {
   });
 
   const dispatch = useDispatch();
-  const isSuccess = useSelector(state => state.user.data);
+  const isSuccess = useSelector((state) => state.user.data);
   return (
     <IconContext.Provider value={{ className: "react-icons" }}>
       <RightSectionSign>
@@ -43,11 +43,9 @@ function RightSection() {
               passwordConfirmation: "",
             }}
             validationSchema={validate}
-            onSubmit={
-              (values) => {
-                dispatch(SignUpAction(values))
-              }
-            }
+            onSubmit={(values) => {
+              dispatch(SignUpAction(values));
+            }}
           >
             {() => (
               <Form>
@@ -57,7 +55,11 @@ function RightSection() {
                   name="email"
                   type="email"
                 />
-                {isSuccess ? <p style={{color: 'red'}}>{isSuccess.message.split(':')[1]}</p> : null}
+                {isSuccess ? (
+                  <p style={{ color: "red" }}>
+                    {isSuccess.message.split(":")[1]}
+                  </p>
+                ) : null}
                 <TextField
                   placeholder="  &#128274; Password"
                   name="password"
