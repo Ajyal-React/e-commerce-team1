@@ -12,7 +12,7 @@ import SpecCard from "./SpecCard";
 import Tabs from "./Tabs";
 import { useSelector, useDispatch } from "react-redux";
 import { FeaturedAct } from "../../../Redux/products/actions/featured-categ-act";
-import Loader from "../../../GlobalUtil/Loader"
+import Loader from "../../../GlobalUtil/Loader";
 function Categories() {
 	const data = useSelector((store) => store.Featured);
 	const dispatch = useDispatch();
@@ -27,12 +27,16 @@ function Categories() {
 					<Tabs />
 					<FlexBox>
 						<div className="multi-card">
-							{data.loading ? <Loader />:  data.data.map((el) => <MultiCard img={el.images} name={el.name} price={el.price} />)}
+							{data.loading ? (
+								<Loader />
+							) : (
+								data.data.map((el) => (
+									<MultiCard img={el.images} name={el.name} price={el.price} />
+								))
+							)}
 						</div>
 						<div className="spec-card">
-						{data.loading ? <Loader /> :  <SpecCard data={data}  /> }
-						
-
+							{data.loading ? <Loader /> : <SpecCard data={data} />}
 						</div>
 					</FlexBox>
 					<Center>

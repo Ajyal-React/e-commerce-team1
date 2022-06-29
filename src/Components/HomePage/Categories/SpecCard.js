@@ -11,7 +11,6 @@ import "swiper/css/scrollbar";
 import { FlexBox, StyledPrice, StyledSubHeading } from "../../../Global.Style";
 
 export default (props) => {
-
 	return (
 		<div className="categories-wrapper">
 			<Swiper

@@ -18,17 +18,18 @@ function Hero() {
 	useEffect(() => {
 		dispatch(HeroAct());
 	}, []);
-	console.log(data.loading);
 	return (
 		<div className="wrapper">
 			<div className="black-paper"></div>
 			<Container>
 				<article>
 					<FlexBoxCol>
-						<StyledHeading fontSize="2.2rem">{data.loading ?  <Loader />  : data.data.map(el => el.name)}</StyledHeading>
+						<StyledHeading fontSize="2.2rem">
+							{data.loading ? <Loader /> : data.data.map((el) => el.name)}
+						</StyledHeading>
 						<StyledParagraph color="#fff" fontSize="1rem">
-            {data.loading ? <Loader /> : data.data.map(el => el.description)}
-            						</StyledParagraph>
+							{data.loading ? <Loader /> : data.data.map((el) => el.description)}
+						</StyledParagraph>
 						<StyledButton bgColor="#FFFFFF" borderRadius=".5rem">
 							Start Shopping <FaAngleDoubleRight />
 						</StyledButton>
