@@ -1,14 +1,14 @@
 import React from "react";
 import UserControlBar from "./UserControlBar";
 import { Container, FlexBox, StyledButton } from "../../Global.Style";
-import { Bars, StyledUlNav, SelectLang, Li } from "./Nav.Style";
+import { NavBar , Bars, StyledUlNav, SelectLang, Li } from "./Nav.Style";
 import { Link } from "react-router-dom";
 import { FaSearch, FaBars } from "react-icons/fa";
 import { useSelector } from "react-redux";
 function Nav() {
   const isLoggedIn = useSelector((state) => state.user.token);
   return (
-    <nav>
+    <NavBar >
       <Container>
         <FlexBox className="nav-bar">
           <Bars>
@@ -67,7 +67,7 @@ function Nav() {
           )}
         </FlexBox>
       </Container>
-    </nav>
+    </NavBar >
   );
 }
 
