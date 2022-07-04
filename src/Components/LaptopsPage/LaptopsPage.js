@@ -26,7 +26,7 @@ const LaptopsPage = () => {
     axios.get(API_URl).then((response) => {
       setLaptops([...response.data.products]);
     });
-  });
+  }, []);
 
   const handleClick = (event) => {
     !event.isClicked ? (event.isClicked = true) : (event.isClicked = false);

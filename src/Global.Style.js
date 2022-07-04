@@ -56,6 +56,7 @@ export const StyledParagraph = styled.p`
   color: ${({ color }) => color};
   margin: ${({ margin }) => margin};
   font-size: ${({ fontSize }) => fontSize};
+  font-weight: ${({ fontWeight }) => fontWeight};;
   display: inline-block;
 `;
 export const StyledHorizontalLine = styled.div`
