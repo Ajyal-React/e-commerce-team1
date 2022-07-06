@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AiFillHeart, AiFillStar, AiOutlineShoppingCart } from "react-icons/ai";
 import { FlexBox, StyledPrice, StyledSubHeading } from "../../../Global.Style";
 
@@ -23,22 +23,18 @@ function MultiCard(props) {
           onClick={handleClick}
         />
         <div className="cont-img-multi">
-          <img
-            src={`/Images/${props.img}.png`}
-            className="img-multi"
-            alt="logo"
-          />
+          <img src={`${props.img}`} className="img-multi" alt="logo" />
         </div>
 
         <FlexBox>
-          <StyledSubHeading fontSize="12px">HP laptop</StyledSubHeading>
+          <StyledSubHeading fontSize="12px">{props.name}</StyledSubHeading>
           <StyledPrice
             color="#0EA965"
             bgColor="white"
             borderRadius="5px"
             fontSize="8px"
           >
-            $99
+            {props.price}
           </StyledPrice>
         </FlexBox>
         <hr className="lines" />

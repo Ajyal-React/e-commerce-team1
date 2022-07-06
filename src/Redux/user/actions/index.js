@@ -1,5 +1,5 @@
 import axios from "axios";
-import { USER_SIGN_IN, USER_SIGN_UP} from "../userTypes";
+import { USER_SIGN_IN, USER_SIGN_UP } from "../userTypes";
 
 
 export const SignInAction = (values) => {
@@ -13,9 +13,13 @@ export const SignInAction = (values) => {
       dispatch({
         type: USER_SIGN_IN,
         payload: res.data,
+        loader: true,
       });
-    } catch (error) {
-      console.log("error", error);
+    } catch ({ response }) {
+      dispatch({
+        type: USER_SIGN_IN,
+        payload: response,
+      });
     }
   };
 };
@@ -33,8 +37,11 @@ export const SignUpAction = (values) => {
         type: USER_SIGN_UP,
         payload: res.data,
       });
-    } catch (error) {
-      console.log("error", error);
+    } catch ({ response }) {
+      dispatch({
+        type: USER_SIGN_UP,
+        payload: response,
+      });
     }
   };
 };

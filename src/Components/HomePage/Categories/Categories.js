@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Center,
   Container,
@@ -10,7 +10,16 @@ import "./Categories.css";
 import MultiCard from "./MultiCard";
 import SpecCard from "./SpecCard";
 import Tabs from "./Tabs";
+import { useSelector, useDispatch } from "react-redux";
+import { FeaturedAct } from "../../../Redux/products/actions/featured-categ-act";
+import Loader from "../../../GlobalUtil/Loader";
 function Categories() {
+  const data = useSelector((store) => store.Featured);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(FeaturedAct("MOBILES"));
+  }, []);
   return (
     <MainContainer>
       <div className="container-card">
@@ -18,13 +27,16 @@ function Categories() {
           <Tabs />
           <FlexBox>
             <div className="multi-card">
-              <MultiCard img={"phone1"} />
-              <MultiCard img={"phone3"} />
-              <MultiCard img={"phone4"} />
-              <MultiCard img={"phone1"} />
+              {data.loading ? (
+                <Loader />
+              ) : (
+                data.data.map((el) => (
+                  <MultiCard img={el.images} name={el.name} price={el.price} />
+                ))
+              )}
             </div>
             <div className="spec-card">
-              <SpecCard />
+              {data.loading ? <Loader /> : <SpecCard data={data} />}
             </div>
           </FlexBox>
           <Center>

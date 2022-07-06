@@ -6,9 +6,9 @@ const TextField = ({ label, ...props }) => {
 
   return (
     <>
-    <InputWrapper>
-      <Input {...field} {...props} autoComplete="off" />
-    </InputWrapper>
+      <InputWrapper>
+        <Input {...field} {...props} autoComplete="off" />
+      </InputWrapper>
       <ErrorMessage name={field.name} />
     </>
   );

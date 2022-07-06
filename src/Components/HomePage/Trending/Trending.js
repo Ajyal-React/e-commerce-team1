@@ -1,25 +1,23 @@
-import React, {useState, useEffect} from "react";
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import {
   Container,
   StyledSubHeading,
-  StyledParagraph
+  StyledParagraph,
 } from "../../../Global.Style";
 import { FlexBoxWrap, TrendingSection } from "./Trending.style";
 import TrendingProduct from "../Trending/TrendingProduct/TrendingProduct";
 
+import { useSelector, useDispatch } from "react-redux";
+import { TrendingAct } from "../../../Redux/products/actions/Trending-Act";
+import Loader from "../../../GlobalUtil/Loader";
 
 const Trending = () => {
-  const [trending, setTrending] = useState([]);
+  const trending = useSelector((store) => store.Trending);
+  const dispatch = useDispatch();
   useEffect(() => {
-    const API_URl = 'https://omar-tech-store.herokuapp.com/api/products/trending-products';
-    
-   axios.get(API_URl)
-  .then(response => {
-    setTrending([...response.data])
-  });
-    
-  }, []); 
+    dispatch(TrendingAct());
+  }, []);
   return (
     <TrendingSection>
       <Container>
@@ -27,15 +25,17 @@ const Trending = () => {
         <StyledSubHeading fontSize="26px">TRENDING THIS WEEK</StyledSubHeading>
 
         <FlexBoxWrap>
-          {trending.map((element) => {
-            return (
+          {trending.loading ? (
+            <Loader />
+          ) : (
+            trending.data.map((el) => (
               <TrendingProduct
-                imgUrl={element.images}
-                title={element.name}
-                price={element.price}
+                imgUrl={el.images}
+                title={el.name}
+                price={el.price}
               />
-            );
-          })}
+            ))
+          )}
         </FlexBoxWrap>
       </Container>
     </TrendingSection>

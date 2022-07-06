@@ -1,21 +1,21 @@
 import React from "react";
-import UserControlBar from './UserControlBar'
+import UserControlBar from "./UserControlBar";
 import { Container, FlexBox, StyledButton } from "../../Global.Style";
 import { Bars, StyledUlNav, SelectLang, Li } from "./Nav.Style";
 import { Link } from "react-router-dom";
 import { FaSearch, FaBars } from "react-icons/fa";
-import {useSelector} from 'react-redux';
+import { useSelector } from "react-redux";
 function Nav() {
-  const isLoggedIn = useSelector(state => state.user.token);
+  const isLoggedIn = useSelector((state) => state.user.token);
   return (
     <nav>
       <Container>
         <FlexBox className="nav-bar">
-        <Bars>
-          <FaBars />
-        </Bars>
+          <Bars>
+            <FaBars />
+          </Bars>
           <SelectLang>
-            <FlexBox >
+            <FlexBox>
               <select>
                 <option value="English">English</option>
                 <option value="Arabic">Arabic</option>
@@ -26,11 +26,15 @@ function Nav() {
           <StyledUlNav>
             <FlexBox>
               <Li>
-                <Link style={{textDecoration: "none"}} to="/">Home</Link>
+                <Link style={{ textDecoration: "none" }} to="/">
+                  Home
+                </Link>
               </Li>
               <Li>New arrival</Li>
               <Li>
-                <Link style={{textDecoration: "none"}} to="/Details">Mobiles</Link>
+                <Link style={{ textDecoration: "none" }} to="/Details">
+                  Mobiles
+                </Link>
               </Li>
             </FlexBox>
           </StyledUlNav>
@@ -39,21 +43,28 @@ function Nav() {
           <StyledUlNav>
             <FlexBox>
               <Li>
-                <Link style={{textDecoration: "none"}} to="/laptops">Laptops</Link>
+                <Link style={{ textDecoration: "none" }} to="/laptops">
+                  Laptops
+                </Link>
               </Li>
               <Li>HeadPhones</Li>
               <Li>Accessories</Li>
             </FlexBox>
           </StyledUlNav>
-          
-          {isLoggedIn?  <UserControlBar />
-          :
-          <Link to="/signup">
-            <StyledButton borderRadius="3rem" bgColor="#F9F8F8" color="#FA7400">
-              Sign In
-            </StyledButton>
-          </Link>
-          }
+
+          {isLoggedIn ? (
+            <UserControlBar />
+          ) : (
+            <Link to="/signup">
+              <StyledButton
+                borderRadius="3rem"
+                bgColor="#F9F8F8"
+                color="#FA7400"
+              >
+                Sign In
+              </StyledButton>
+            </Link>
+          )}
         </FlexBox>
       </Container>
     </nav>
