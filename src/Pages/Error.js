@@ -1,8 +1,9 @@
 import React from 'react'
+import Errorpg from '../Components/Error/Error'
 
 function Error() {
   return (
-    <div>Error 404 </div>
+    <div><Errorpg /> </div>
   )
 }
 

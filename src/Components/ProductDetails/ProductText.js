@@ -9,10 +9,10 @@ function ProductText() {
 	const dispatch = useDispatch();
 	let { id } = useParams();
 
-	useEffect(() => {
-		dispatch(DetailsAct(id));
-	}, []);
-	console.log(datas);
+	// useEffect(() => {
+	// 	dispatch(DetailsAct(id));
+	// }, []);
+
 	return (
 		<div>
 			<FlexBox>

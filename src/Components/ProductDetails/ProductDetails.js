@@ -12,40 +12,44 @@ function ProductDetails() {
 		setData(e.target.src);
 	}
 
-	let {id} = useParams();
-	
+	let { id } = useParams();
+
 	useEffect(() => {
 		dispatch(DetailsAct(id));
-		}, []);
-		
+	}, []);
+	
 	const [data, setData] = useState("");
 
 	return (
 		<Container>
-      <div  className="cont-cars">
-			<div className="sec-lef">
-
-				<div className="specImg">
-					<img src={data} className="sImg" />
+			{datas.loading ? (
+				"load "
+			) :  (
+				<div className="cont-cars">
+					<div className="sec-lef">
+						<div className="specImg">
+							<img src={data} className="sImg" />
+						</div>
+						<div className="smlImg">
+						{ datas?.data?.images?.map((el) => (
+										<>
+											<div className="smImg">
+												<img
+													src={el}
+													width="110px"
+													height="100px"
+													onClick={(e) => handleImg(e)}
+												/>
+											</div>
+										</>
+								  ))}
+						</div>
+					</div>
+					<div className="seSection">
+						<ProductText />
+					</div>
 				</div>
-				<div className="smlImg">
-				{datas.loading ? "load " : datas.data.images.map(el  =><div className="smImg">
-						<img
-							src={el}
-							width="110px"
-							height="100px"
-							onClick={(e) => handleImg(e)}
-						/>
-					</div> )}
-
-				
-			
-				</div>
-			</div>
-      <div className="seSection">
-      <ProductText />
-      </div>
-      </div>
+			)}
 		</Container>
 	);
 }

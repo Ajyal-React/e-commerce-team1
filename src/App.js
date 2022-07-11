@@ -8,6 +8,7 @@ import Laptops from "./Pages/Laptops"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Loader from "./GlobalUtil/Loader";
 import Error from "./Pages/Error";
+import CartPage from "./Pages/CartPage";
 
 function App() {
   
@@ -20,6 +21,7 @@ function App() {
           <Route path="/login" element={<LOGIN />} />
           <Route path="/details/:id" element={<Details />} />
           <Route path="/laptops" element={<Laptops />} />
+          <Route path="/cart" element={<CartPage />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </div>

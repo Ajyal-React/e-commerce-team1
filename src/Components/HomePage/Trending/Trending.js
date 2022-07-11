@@ -19,7 +19,6 @@ const Trending = () => {
 	useEffect(() => {
 		dispatch(TrendingAct());
 	}, []);
-	console.log(trending.data);
 	return (
 		<TrendingSection>
 			<Container>
