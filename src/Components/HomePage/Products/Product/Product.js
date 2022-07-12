@@ -6,6 +6,7 @@ import {
 } from "../../../../Global.Style";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import "./Product.css";
+import { Link } from "react-router-dom";
 
 const Product = (props) => {
   return (
@@ -16,7 +17,10 @@ const Product = (props) => {
         {props.price}
       </StyledPrice>
       <StyledButton borderRadius="2rem" bgColor="transparent" color="#8A8A8A">
-        More info <FaLongArrowAltRight />
+      <Link to={`/details/${props.id}`}>
+      More info
+        </Link>
+       <FaLongArrowAltRight />
       </StyledButton>
     </div>
   );

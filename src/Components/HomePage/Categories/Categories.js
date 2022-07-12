@@ -30,8 +30,8 @@ function Categories() {
 							{data.loading ? (
 								<Loader />
 							) : (
-								data.data.map((el) => (
-									<MultiCard img={el.images} name={el.name} price={el.price} />
+								data.data.map((el , index) => (
+									<MultiCard key={index} id={el._id} img={el.images} name={el.name} price={el.price} />
 								))
 							)}
 						</div>

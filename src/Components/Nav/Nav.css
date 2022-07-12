@@ -1,10 +1,11 @@
 nav {
-  background-color: rgba(223, 222, 227, 0.79);
+  background-color: rgba(255, 255, 255, 0.98);
   position: fixed;
   width: 100%;
   z-index: 10000;
   top: 0;
-  
+  z-index: 99;
+  box-shadow: 1px 1px 7px rgba(202, 202, 202, 0.774);
 }
 .nav-bar {
   height: 5rem;
@@ -39,3 +40,38 @@ nav {
   color: #fff;
 }
 
+.serch{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #eeeeeff6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-input{
+  background-color: #eeeeeff6;
+  width: 90vh;
+  height: 60px;
+  border: none;
+  padding: 10px;
+  border-left:3px solid gray;
+  outline: none;
+  font-size: 18px;
+}
+.icon-srch{
+  height: 60px;  background-color: #eeeeeff6;
+  border: none;
+  width: 10vh;
+  padding: 20px;
+  color: #8F8C8C;
+}
+.out-search{
+  position: absolute;
+  top: 16%;
+  right: 26%;
+  color: #8F8C8C;
+  font-size: larger;
+}

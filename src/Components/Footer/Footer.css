@@ -13,7 +13,7 @@
   font-size: 0.7rem;
   text-align: left;
   color: #302f2f;
-  width: 333px;
+  width: 250px;
   height: 100px;
   padding: 10px;
 }
@@ -27,10 +27,11 @@
 .liset_item ul {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .liset_item ul li {
-  margin: 1rem 0;
+  margin: 0.5rem 0;
+  
 }
 .liset_item h4 {
   color: #302f2f;

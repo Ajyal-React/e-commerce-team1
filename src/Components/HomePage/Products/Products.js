@@ -49,13 +49,15 @@ const Products = () => {
 				pagination={{ dynamicBullets: true }}
 			>
 				<div className="products-list">
-					{products.map((element) => {
+					{products.map((element , index) => {
 						return (
-							<SwiperSlide>
+							<SwiperSlide key={index}>
 								<Product
 									imgUrl={element.images}
 									title={element.name}
 									price={element.price}
+									id={element._id}
+
 								/>
 							</SwiperSlide>
 						);

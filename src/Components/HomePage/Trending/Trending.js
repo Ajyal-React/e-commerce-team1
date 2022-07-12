@@ -29,9 +29,9 @@ const Trending = () => {
 					{trending.loading ? (
 						<Loader />
 					) : (
-						trending.data.map((el) => (
+						trending.data.map((el , index) => (
 							<Link to={`/details/${el._id}`}>
-								<TrendingProduct
+								<TrendingProduct key={index}
 									imgUrl={el.images}
 									title={el.name}
 									price={el.price}

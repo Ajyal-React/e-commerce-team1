@@ -1,7 +1,7 @@
 import axios from "axios";
 import { USER_SIGN_IN, USER_SIGN_UP } from "../userTypes";
 
-export const SignInAction = (values) => {
+export const SignInAction = (values , goto) => {
 	return async (dispatch) => {
 		try {
 			const res = await axios.post(
@@ -10,6 +10,7 @@ export const SignInAction = (values) => {
 			);
 
 			localStorage.setItem("user", JSON.stringify(res.data));
+				goto()
 			dispatch({
 				type: USER_SIGN_IN,
 				payload: res.data,
