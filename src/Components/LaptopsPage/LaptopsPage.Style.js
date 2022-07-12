@@ -17,23 +17,22 @@ export const CategoriesContainer = styled(Container)`
 export const CategoriesCard = styled.div`
   min-width: 330px;
   min-height: 436px;
-  background-color: #F9F8F8;
+  background-color: #f9f8f8;
   border-radius: 5px;
   position: relative;
 `;
 export const ImgDiv = styled(FlexBoxCategories)`
   height: 325px;
-  width : 325px;
+  width: 325px;
 `;
 export const Image = styled.img`
   width: 100%;
   height: 100%;
 `;
 export const HeartIcon = styled(Center)`
- position: absolute;
- top: 30px;
- right: 30px;
- color: #E6E6E6;
- cursor: pointer;
-;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #e6e6e6;
+  cursor: pointer; ;
 `;
