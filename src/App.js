@@ -7,10 +7,14 @@ import Details from "./Pages/Details";
 import Laptops from "./Pages/Laptops";
 import UserProfile from "./Pages/UserProfile";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import UserOrders from "./Components/UserProfilePage/UserOrders";
+import UserWishlist from "./Components/UserProfilePage/UserWishlist";
+import UserNotifications from "./Components/UserProfilePage/UserNotifications";
+import UserSettings from "./Components/UserProfilePage/UserSettings";
+import Cart from "./Pages/Cart"
 import Loader from "./GlobalUtil/Loader";
 
 function App() {
-  
   return (
     <Router>
       <div className="App">
@@ -18,9 +22,15 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<LOGIN />} />
-          <Route path="/Details" element={<Details />} />
+          <Route path="/details" element={<Details />} />
           <Route path="/laptops" element={<Laptops />} />
-          <Route path="/profile" element={<UserProfile/>} />
+          <Route path="/profile" element={<UserProfile />}>
+            <Route path="myorders" element={<UserOrders  />} />
+            <Route path="wishlist" element={<UserWishlist />} />
+            <Route path="notifications" element={<UserNotifications />} />
+            <Route path="settings" element={<UserSettings />} />
+          </Route>
+          <Route path="/mycart" element={<Cart />} />
         </Routes>
       </div>
     </Router>
@@ -28,3 +38,23 @@ function App() {
 }
 
 export default App;
+
+// import ReactDOM from "react-dom/client";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+// // import your route components too
+
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(
+//   <BrowserRouter>
+//     <Routes>
+//       <Route path="/" element={<App />}>
+//         <Route index element={<Home />} />
+//         <Route path="teams" element={<Teams />}>
+//           <Route path=":teamId" element={<Team />} />
+//           <Route path="new" element={<NewTeamForm />} />
+//           <Route index element={<LeagueStandings />} />
+//         </Route>
+//       </Route>
+//     </Routes>
+//   </BrowserRouter>
+// );

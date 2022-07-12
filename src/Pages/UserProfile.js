@@ -4,9 +4,9 @@ import Footer from "../Components/Footer/Footer";
 import UserInfo from "../Components/UserProfilePage/UserInfo";
 import UserControlSideBarV from "../Components/UserProfilePage/UserControlSideBarV";
 import UserControlBarH from "../Components/UserProfilePage/UserControlSideBarH"
-import UserOrders from "../Components/UserProfilePage/UserOrders";
 import { MainContainer } from "../Global.Style";
-import {TopSection, MainContainerUser } from "../Components/UserProfilePage/Profile.Style"
+import {TopSection, MainContainerUser } from "../Components/UserProfilePage/Profile.Style";
+import {  Outlet } from "react-router-dom";
 const UserProfile = () => {
   return (
  
@@ -18,7 +18,7 @@ const UserProfile = () => {
         </TopSection>
         <MainContainerUser>
         <UserControlSideBarV/>
-        <UserOrders />
+        <Outlet />
         </MainContainerUser>
       <Footer />
       </MainContainer>
