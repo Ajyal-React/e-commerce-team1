@@ -27,7 +27,7 @@ function CartOrder() {
       <LeftSection>
         <OrderDetails>
           <ImgDiv>
-            <img src="/Images/people.svg" alt="" />
+            <img src="/Images/bag.png" alt="" />
           </ImgDiv>
           <ControlDiv>
             <StyledParagraph>Laptop Bag</StyledParagraph>
@@ -40,7 +40,7 @@ function CartOrder() {
         </OrderDetails>
       </LeftSection>
       <RightSection>
-        <StyledParagraph color="#0EA965">75$</StyledParagraph>
+        <StyledParagraph color="#0EA965">{75 * quantity}$</StyledParagraph>
         <Cross />
       </RightSection>
     </Order>

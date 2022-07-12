@@ -9,7 +9,7 @@ import {
   StyledBtn
 } from "./Cart.style";
 import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
-import { StyledParagraph, StyledButton } from "../../Global.Style";
+import { StyledParagraph } from "../../Global.Style";
 import CartOrder from "./CartOrder"
 
 function Cart() {

@@ -92,7 +92,12 @@ export const OrderDetails = styled(FlexBoxCenter)`
 `;
 export const ImgDiv = styled(FlexBoxCenter)`
   width: 100px;
+  height: 100px;
   height: inherit;
+  & img {
+    width: 100%;
+    height: 100%;
+  }
 `;
 export const ControlDiv = styled(FlexBoxCenter)`
   justify-content: space-between;

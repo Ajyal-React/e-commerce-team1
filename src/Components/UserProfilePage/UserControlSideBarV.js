@@ -1,6 +1,6 @@
 import React from "react";
 import { ControlSideBarV, StyledUlProfile, ListItem } from "./Profile.Style";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 const UserControlBar = () => {
   return (
     <ControlSideBarV>
@@ -18,7 +18,6 @@ const UserControlBar = () => {
           <ListItem>Settings</ListItem>
         </Link>
         <ListItem>Logout</ListItem>
-        {/* <Outlet /> */}
       </StyledUlProfile>
     </ControlSideBarV>
   );
