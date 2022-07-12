@@ -71,3 +71,11 @@ select{
 .amg{
     margin: 10px 0 ;
 }
+.color-details{
+    height: 28px ; 
+    width: 30px;
+    margin: 10px 0 ;
+}
+.container-color-details{
+    display: flex;
+}

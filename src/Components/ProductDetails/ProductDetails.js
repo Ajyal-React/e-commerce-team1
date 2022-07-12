@@ -5,44 +5,49 @@ import "./ProdDetails.css";
 import ProductText from "./ProductText";
 import { useSelector, useDispatch } from "react-redux";
 import { DetailsAct } from "../../Redux/products/actions/Details-Act";
+
 function ProductDetails() {
 	const datas = useSelector((store) => store.Details);
 	const dispatch = useDispatch();
+
 	function handleImg(e) {
 		setData(e.target.src);
 	}
 
 	let { id } = useParams();
-
+	function simulateClick(e) {
+		e.click()
+	  }
 	useEffect(() => {
 		dispatch(DetailsAct(id));
-	}, []);
 	
+	}, []);
+
 	const [data, setData] = useState("");
 
 	return (
 		<Container>
 			{datas.loading ? (
 				"load "
-			) :  (
+			) : (
 				<div className="cont-cars">
 					<div className="sec-lef">
 						<div className="specImg">
 							<img src={data} className="sImg" />
 						</div>
-						<div className="smlImg">
-						{ datas?.data?.images?.map((el) => (
-										<>
-											<div className="smImg">
-												<img
-													src={el}
-													width="110px"
-													height="100px"
-													onClick={(e) => handleImg(e)}
-												/>
-											</div>
-										</>
-								  ))}
+						<div className="smlImg" >
+							{datas?.data?.images?.map((el) => (
+								<>
+									<div className="smImg">
+										<img 
+											src={el}
+											width="110px"
+											height="100px"
+											onClick={(e) => handleImg(e)}
+										/>
+									</div>
+								</>
+							))}
 						</div>
 					</div>
 					<div className="seSection">

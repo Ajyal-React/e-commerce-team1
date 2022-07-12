@@ -1,18 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { ColCenter, FlexBox, FlexBoxCol } from "../../Global.Style";
+import React from "react";
+import { ColCenter, FlexBox } from "../../Global.Style";
 import "./ProdDetails.css";
-import { useSelector, useDispatch } from "react-redux";
-import { DetailsAct } from "../../Redux/products/actions/Details-Act";
-import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 function ProductText() {
 	const datas = useSelector((store) => store.Details);
-	const dispatch = useDispatch();
-	let { id } = useParams();
-
-	// useEffect(() => {
-	// 	dispatch(DetailsAct(id));
-	// }, []);
-
+	console.log(datas.data);
 	return (
 		<div>
 			<FlexBox>
@@ -32,10 +24,19 @@ function ProductText() {
 			<FlexBox className="amg">
 				{datas.loading
 					? "sadasd"
-					: datas.data.colors.map((el , index) => (
+					: datas?.data?.colors?.map((el, index) => (
 							<ColCenter>
 								<label for={index}>
-									<img src="/Images/colors.png" />
+									<div className="container-color-details">
+										<div
+											className="color-details"
+											style={{ background: ` ${el?.one}` }}
+										></div>
+										<div
+											className="color-details"
+											style={{ background: ` ${el?.two}` }}
+										></div>
+									</div>
 								</label>
 								<input type="radio" id={index} name="fav_language" value={el} />
 							</ColCenter>
@@ -44,29 +45,52 @@ function ProductText() {
 			<div>
 				<label for="cars">Size and Weight :</label>
 				<br />
-				<select name="cars" id="cars">
-					{datas.loading ? "brand" : datas.data.size.map((el) => el)}
-				</select>
-				<br />
+				{datas?.data?.size?.length !== 0 ? (
+					<div>
+						<select name="cars" id="cars">
+							{datas.loading
+								? "brand"
+								: datas?.data?.size?.map((el) => <option>{el}</option>)}
+						</select>
+						<br />
+					</div>
+				) : null}
 				<label for="cars">Chip:</label>
 				<br />
-				<select name="cars" id="cars">
-					{datas.loading ? "brand" : datas.data.size.map((el) => el)}
-				</select>
-				<br />
-				<label for="cars">Storage:</label>
-				<br />
-				<select name="cars" id="cars">
-					{datas.loading ? "brand" : datas.data.memory.map((el) => el)}
-				</select>{" "}
-				<br />
-				<label for="cars">Memory:</label>
-				<br />
-				<select name="cars" id="cars">
-					{datas.loading ? "brand" : datas.data.memory.map((el) => el)}
-				</select>{" "}
-				<br />
-				<br />
+				{datas?.data?.size?.length !== 0 ? (
+					<div>
+						<select name="cars" id="cars">
+							{datas.loading
+								? "brand"
+								: datas?.data?.size?.map((el) => <option>{el}</option>)}
+						</select>
+						<br />
+					</div>
+				) : null}
+				{datas?.data?.storage?.length !== 0 ? (
+					<div>
+												<label for="cars">storage:</label>
+
+						<select name="cars" id="cars">
+							{datas.loading
+								? "brand"
+								: datas?.data?.storage?.map((el) => <option>{el}</option>)}
+						</select>
+						<br />
+					</div>
+				) : null}
+				{datas?.data?.memory?.length !== 0 ? (
+					<div>
+						<label for="cars">Memory:</label>
+
+						<select name="cars" id="cars">
+							{datas.loading
+								? "brand"
+								: datas?.data?.memory?.map((el) => <option>{el}</option>)}
+						</select>
+						<br />
+					</div>
+				) : null}
 				<button className="butn">Add To Cart</button>
 				<br />
 			</div>

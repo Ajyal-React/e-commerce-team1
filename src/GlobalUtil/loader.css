@@ -1,8 +1,9 @@
+
 .containerlod{
 background-color: white;
 height: 100vh;
 width: 100%;
-position: absolute;
+position: fixed;
 top: 0;
 right: 0;
 z-index: 999;
