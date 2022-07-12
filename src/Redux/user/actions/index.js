@@ -1,7 +1,6 @@
 import axios from "axios";
 import { USER_SIGN_IN, USER_SIGN_UP } from "../userTypes";
 
-
 export const SignInAction = (values) => {
   return async (dispatch) => {
     try {

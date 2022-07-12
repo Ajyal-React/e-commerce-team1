@@ -29,7 +29,6 @@ const Products = () => {
   useEffect(() => {
     dispatch(feturedProduct());
   }, []);
-
   return (
     <div className="products-sec">
       <Container>
