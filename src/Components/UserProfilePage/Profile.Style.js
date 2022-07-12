@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { MainContainer, FlexBox, StyledUl } from "../../Global.Style";
+import { Link } from "react-router-dom";
 export const MainContainerUser = styled(MainContainer)`
   height: 100vh;
   margin-top: 14.1rem;
@@ -7,7 +8,7 @@ export const MainContainerUser = styled(MainContainer)`
   display: flex;
   border: 1px solid #ddd;
   @media only screen and (max-width: 768px) {
-    margin-top: 25rem;
+    margin-top: 32rem;
   }
 `;
 
@@ -110,11 +111,17 @@ export const StyledUlProfile = styled(StyledUl)`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  & li:last-child {
+  & a {
+    color: #646363;
+  }
+  &:last-child {
+    color: red;
+  }
+  & a:last-child {
     color: red;
     margin-top: 7rem;
   }
-  & li:not(:last-child) {
+  & a:not(:last-child) {
     margin-bottom: -10rem;
   }
 `;
@@ -190,6 +197,6 @@ export const Order = styled.div`
   }
 `;
 
-export const Any = styled.div`
-  position: relative;
+export const NavLink = styled(Link)`
+  text-decoration: none;
 `;

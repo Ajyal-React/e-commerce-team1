@@ -86,9 +86,9 @@ export const StyledTrendingCard = styled.div`
 `;
 
 export const StyledButton = styled.button`
-  border-radius: ${({ borderRadius }) => borderRadius};
+  border-radius: ${({ borderRadius }) => borderRadius? borderRadius : ".5rem"};
   background-color: ${({ bgColor }) => bgColor ? bgColor : "transparent"};
-  color: ${({ color }) => color};
+  color: ${({ color }) => color ? color : "#fff"};
   padding: 0.5rem 1.5rem;
   cursor: pointer;
   border: none;

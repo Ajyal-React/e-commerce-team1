@@ -1,7 +1,7 @@
 import { FaBars } from "react-icons/fa";
 import styled from "styled-components";
 import { StyledUl, FlexBox } from "../../Global.Style";
-
+import { Link } from "react-router-dom";
 export const NavBar = styled.nav`
   background-color: rgba(223, 222, 227, 0.79);
   position: fixed;
@@ -36,4 +36,9 @@ export const Bars = styled(FaBars)`
   @media only screen and (max-width: 768px) {
     display: block;
   }
+`;
+export const NavLink = styled(Link)`
+  color: #32353c;
+  text-decoration: none;
+  font-weight: bold;
 `;

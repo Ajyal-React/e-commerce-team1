@@ -1,8 +1,7 @@
 import React from "react";
 import UserControlBar from "./UserControlBar";
 import { Container, FlexBox, StyledButton } from "../../Global.Style";
-import { NavBar , Bars, StyledUlNav, SelectLang, Li } from "./Nav.Style";
-import { Link } from "react-router-dom";
+import { NavBar , Bars, StyledUlNav, SelectLang, Li, NavLink } from "./Nav.Style";
 import { FaSearch, FaBars } from "react-icons/fa";
 import { useSelector } from "react-redux";
 function Nav() {
@@ -26,15 +25,15 @@ function Nav() {
           <StyledUlNav>
             <FlexBox>
               <Li>
-                <Link style={{ textDecoration: "none" }} to="/">
+                <NavLink to="/">
                   Home
-                </Link>
+                </NavLink>
               </Li>
               <Li>New arrival</Li>
               <Li>
-                <Link style={{ textDecoration: "none" }} to="/Details">
+                <NavLink to="/Details">
                   Mobiles
-                </Link>
+                </NavLink>
               </Li>
             </FlexBox>
           </StyledUlNav>
@@ -43,9 +42,9 @@ function Nav() {
           <StyledUlNav>
             <FlexBox>
               <Li>
-                <Link style={{ textDecoration: "none" }} to="/laptops">
+                <NavLink to="/laptops">
                   Laptops
-                </Link>
+                </NavLink>
               </Li>
               <Li>HeadPhones</Li>
               <Li>Accessories</Li>
@@ -55,7 +54,7 @@ function Nav() {
           {isLoggedIn ? (
             <UserControlBar />
           ) : (
-            <Link to="/signup">
+            <NavLink to="/signup">
               <StyledButton
                 borderRadius="3rem"
                 bgColor="#F9F8F8"
@@ -63,7 +62,7 @@ function Nav() {
               >
                 Sign In
               </StyledButton>
-            </Link>
+            </NavLink>
           )}
         </FlexBox>
       </Container>
