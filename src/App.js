@@ -13,7 +13,7 @@ import UserNotifications from "./Components/UserProfilePage/UserNotifications";
 import UserSettings from "./Components/UserProfilePage/UserSettings";
 import Cart from "./Pages/Cart"
 import Loader from "./GlobalUtil/Loader";
-
+import PaymentPage from './Components/PaymentPage'
 function App() {
   
   return (
@@ -33,6 +33,7 @@ function App() {
           </Route>
           <Route path="/mycart" element={<Cart />} />
         </Routes>
+        
       </div>
     </Router>
   );
