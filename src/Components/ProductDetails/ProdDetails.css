@@ -30,9 +30,13 @@
             flex-direction: row;
             margin-top: 100px;
             gap: 50px;
+            
     }
     .seSection{
         width: 40%;
+    }
+    .sec-lef{
+        width: 50%;
     }
 select{
     width: 100%;
@@ -66,4 +70,12 @@ select{
 }
 .amg{
     margin: 10px 0 ;
+}
+.color-details{
+    height: 28px ; 
+    width: 30px;
+    margin: 10px 0 ;
+}
+.container-color-details{
+    display: flex;
 }
