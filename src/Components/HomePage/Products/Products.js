@@ -8,6 +8,9 @@ import {
 } from "../../../Global.Style";
 import Product from "../Products/Product/Product";
 import "./Products.css";
+import { useSelector, useDispatch } from "react-redux";
+
+import { feturedProduct } from "../../../Redux/products/actions/FuturdeProudct";
 
 // import Swiper core and required modules
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -20,16 +23,12 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 const Products = () => {
-  const [products, setProducts] = useState([]);
+  const featured = useSelector((store) => store.productReducer);
+  console.log(featured);
+  const dispatch = useDispatch();
   useEffect(() => {
-    const API_URl =
-      "https://omar-tech-store.herokuapp.com/api/products/featured-products";
-
-    axios.get(API_URl).then((response) => {
-      setProducts([...response.data]);
-    });
+    dispatch(feturedProduct());
   }, []);
-
   return (
     <div className="products-sec">
       <Container>
@@ -49,17 +48,17 @@ const Products = () => {
         pagination={{ dynamicBullets: true }}
       >
         <div className="products-list">
-          {products.map((element) => {
-            return (
-              <SwiperSlide>
-                <Product
-                  imgUrl={element.images}
-                  title={element.name}
-                  price={element.price}
-                />
-              </SwiperSlide>
-            );
-          })}
+          {featured?.data.map((element) => (
+            <SwiperSlide>
+              <Product
+                imgUrl={element.images}
+                title={element.name}
+                price={element.price}
+              />
+            </SwiperSlide>
+          ))}
+                  console.log(featured);
+
         </div>
       </Swiper>
 
