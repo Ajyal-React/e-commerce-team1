@@ -32,6 +32,7 @@ function RightSection() {
             initialValues={{
               email: "mahmoud@hammad.com",
               password: "Mahmoud!123",
+              
             }}
             validationSchema={validate}
             onSubmit={(values) => {
