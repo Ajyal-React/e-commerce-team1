@@ -8,12 +8,12 @@ function UserControlBar() {
     <IconSection>
       <AiOutlineHeart />
       <NavLink to="/profile">
-      <AiOutlineUser />
-        </NavLink>
+        <AiOutlineUser />
+      </NavLink>
       <StyledParagraph>0.00$</StyledParagraph>
       <Center className="bag-icon">
-      <NavLink to="/mycart">
-        <BsHandbagFill />
+        <NavLink to="/mycart">
+          <BsHandbagFill />
         </NavLink>
         <Center className="counter">
           <StyledParagraph fontSize="14px">0</StyledParagraph>

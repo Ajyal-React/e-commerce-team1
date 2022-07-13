@@ -1,55 +1,55 @@
 h3 {
-    color: #000000;
-    position: relative;
-    height: 33px;
-  }
+  color: #000000;
+  position: relative;
+  height: 33px;
+}
 
-  .form-sec {
-    height: 75%;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-  }
+.form-sec {
+  height: 75%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
 
-  .form-sec form {
-    display: flex;
-    flex-direction: column;
-  }
-  .form-sec button {
+.form-sec form {
+  display: flex;
+  flex-direction: column;
+}
+.form-sec button {
   align-self: flex-end;
-  }
-  
-  .react-icons {
-    color: #fff;
-    background-color: #F6921E;
-    border-radius: 50%;
-    font-size: 1.2rem;
-    margin-left: 1rem;
-  }
+}
 
-  .form-sec button:hover .react-icons{
-    margin-left: 2rem;
-  }
-  
-  p span {
-    color: #3B3B3B;
-  }
-  
-  .email-input {
-    height: 55px;
-  }
+.react-icons {
+  color: #fff;
+  background-color: #f6921e;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+}
 
-  .err{
-    color: red;
-    font-size: small  ;
-    position: absolute;
-    top: 60px;
-  }
-  .err2{
-    color: red;
-    font-size: small  ;
-    position: absolute;
-    top: 70px;
-  }
+.form-sec button:hover .react-icons {
+  margin-left: 2rem;
+}
+
+p span {
+  color: #3b3b3b;
+}
+
+.email-input {
+  height: 55px;
+}
+
+.err {
+  color: red;
+  font-size: small;
+  position: absolute;
+  top: 60px;
+}
+.err2 {
+  color: red;
+  font-size: small;
+  position: absolute;
+  top: 70px;
+}

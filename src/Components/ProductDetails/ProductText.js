@@ -2,9 +2,10 @@ import React from "react";
 import { ColCenter, FlexBox } from "../../Global.Style";
 import "./ProdDetails.css";
 import { useSelector } from "react-redux";
+import { LOADING } from "../../Redux/products/productType";
 function ProductText() {
   const datas = useSelector((store) => store.Details);
-  console.log(datas.data);
+  console.log(datas);
   return (
     <div>
       <FlexBox>
@@ -22,31 +23,33 @@ function ProductText() {
         <hr />
       </div>
       <FlexBox className="amg">
-        {datas.loading
-          ? "sadasd"
-          : datas?.data?.colors?.map((el, index) => (
-              <ColCenter>
-                <label for={index}>
-                  <div className="container-color-details">
-                    <div
-                      className="color-details"
-                      style={{ background: ` ${el?.one}` }}
-                    ></div>
-                    <div
-                      className="color-details"
-                      style={{ background: ` ${el?.two}` }}
-                    ></div>
-                  </div>
-                </label>
-                <input type="radio" id={index} name="fav_language" value={el} />
-              </ColCenter>
-            ))}
+        {datas.loading ? (
+          <LOADING />
+        ) : (
+          datas?.data?.colors?.map((el, index) => (
+            <ColCenter>
+              <label for={index}>
+                <div className="container-color-details">
+                  <div
+                    className="color-details"
+                    style={{ background: ` ${el?.one}` }}
+                  ></div>
+                  <div
+                    className="color-details"
+                    style={{ background: ` ${el?.two}` }}
+                  ></div>
+                </div>
+              </label>
+              <input type="radio" id={index} name="fav_language" value={el} />
+            </ColCenter>
+          ))
+        )}
       </FlexBox>
       <div>
-        <label for="cars">Size and Weight :</label>
-        <br />
         {datas?.data?.size?.length !== 0 ? (
           <div>
+            <label for="cars">Size and Weight :</label>
+            <br />
             <select name="cars" id="cars">
               {datas.loading
                 ? "brand"
@@ -55,18 +58,7 @@ function ProductText() {
             <br />
           </div>
         ) : null}
-        <label for="cars">Chip:</label>
-        <br />
-        {datas?.data?.size?.length !== 0 ? (
-          <div>
-            <select name="cars" id="cars">
-              {datas.loading
-                ? "brand"
-                : datas?.data?.size?.map((el) => <option>{el}</option>)}
-            </select>
-            <br />
-          </div>
-        ) : null}
+
         {datas?.data?.storage?.length !== 0 ? (
           <div>
             <label for="cars">storage:</label>

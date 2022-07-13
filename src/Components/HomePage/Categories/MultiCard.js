@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { AiFillHeart, AiFillStar, AiOutlineShoppingCart } from "react-icons/ai";
 import { FlexBox, StyledPrice, StyledSubHeading } from "../../../Global.Style";
+import { Link } from "react-router-dom";
 
 function MultiCard(props) {
   const [likes, setLikes] = React.useState(100);
@@ -8,9 +9,9 @@ function MultiCard(props) {
 
   const handleClick = () => {
     if (isClicked) {
-      setLikes(likes == true);
+      setLikes(likes === true);
     } else {
-      setLikes(likes == false);
+      setLikes(likes === false);
     }
     setIsClicked(!isClicked);
   };
@@ -47,7 +48,9 @@ function MultiCard(props) {
             <AiFillStar className="ico-star" />
           </p>
           <p className="prev-price">
-            <AiOutlineShoppingCart className="ico-shop" />
+            <Link to={`/details/${props.id}`}>
+              <AiOutlineShoppingCart className="ico-shop" />
+            </Link>
           </p>
         </FlexBox>
       </div>

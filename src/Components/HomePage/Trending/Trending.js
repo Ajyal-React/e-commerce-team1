@@ -29,12 +29,16 @@ const Trending = () => {
           {trending.loading ? (
             <Loader />
           ) : (
-            trending.data.map((el) => (
-              <TrendingProduct
-                imgUrl={el.images}
-                title={el.name}
-                price={el.price}
-              />
+            trending.data.map((el, index) => (
+              <Link to={`/details/${el._id}`}>
+                <TrendingProduct
+                  key={index}
+                  imgUrl={el.images}
+                  title={el.name}
+                  price={el.price}
+                  id={el._id}
+                />
+              </Link>
             ))
           )}
         </FlexBoxWrap>
