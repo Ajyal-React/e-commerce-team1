@@ -13,6 +13,7 @@ import UserNotifications from "./Components/UserProfilePage/UserNotifications";
 import UserSettings from "./Components/UserProfilePage/UserSettings";
 import Cart from "./Pages/Cart";
 import Loader from "./GlobalUtil/Loader";
+import Payment from "./Pages/Payment";
 import Error from "./Pages/Error";
 import CartPage from "./Pages/CartPage";
 
@@ -36,6 +37,7 @@ function App() {
             <Route path="settings" element={<UserSettings />} />
           </Route>
           <Route path="/mycart" element={<Cart />} />
+          <Route path="/payment" element={<Payment />} />
         </Routes>
       </div>
     </Router>
