@@ -11,11 +11,13 @@ import UserOrders from "./Components/UserProfilePage/UserOrders";
 import UserWishlist from "./Components/UserProfilePage/UserWishlist";
 import UserNotifications from "./Components/UserProfilePage/UserNotifications";
 import UserSettings from "./Components/UserProfilePage/UserSettings";
-import Cart from "./Pages/Cart"
+import Cart from "./Pages/Cart";
 import Loader from "./GlobalUtil/Loader";
-import PaymentPage from './Components/PaymentPage'
+import Payment from "./Pages/Payment";
+import Error from "./Pages/Error";
+import CartPage from "./Pages/CartPage";
+
 function App() {
-  
   return (
     <Router>
       <div className="App">
@@ -23,21 +25,23 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<LOGIN />} />
-          <Route path="/details" element={<Details />} />
+          <Route path="/details/:id" element={<Details />} />
           <Route path="/laptops" element={<Laptops />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="*" element={<Error />} />
+          <Route path="/details" element={<Details />} />
           <Route path="/profile" element={<UserProfile />}>
-            <Route path="myorders" element={<UserOrders  />} />
+            <Route path="myorders" element={<UserOrders />} />
             <Route path="wishlist" element={<UserWishlist />} />
             <Route path="notifications" element={<UserNotifications />} />
             <Route path="settings" element={<UserSettings />} />
           </Route>
           <Route path="/mycart" element={<Cart />} />
+          <Route path="/payment" element={<Payment />} />
         </Routes>
-        
       </div>
     </Router>
   );
 }
 
 export default App;
-

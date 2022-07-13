@@ -24,8 +24,8 @@ export default (props) => {
         slidesPerView={1}
         pagination={{ clickable: true }}
       >
-        {props.data.data.map((el) => (
-          <SwiperSlide>
+        {props.data.data.map((el, index) => (
+          <SwiperSlide key={index}>
             <div>
               <div className="discounts">SALE -70%</div>
               <img src={el.images} alt="logo" className="ph-sal" />

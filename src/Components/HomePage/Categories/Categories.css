@@ -88,11 +88,13 @@
 
 .img-multi {
   height: 160px;
-  width: 80px;
+  width: 170px;
 }
 
 .ph-sal {
   height: 460px;
+  width: 100%;
+  z-index: 999;
 }
 
 .cont-img-multi {

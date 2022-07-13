@@ -1,0 +1,59 @@
+.CartContainer {
+  height: 100vh;
+}
+
+.retrn {
+  margin: 30px 0;
+  display: block;
+}
+.basicCart {
+  border: 1px solid #e1e1e1;
+  padding: 15px;
+  border-radius: 5px;
+}
+.basicCart_img {
+  width: 70px;
+  height: 50px;
+}
+.same {
+  margin: 0 20px;
+}
+.basicCart_name {
+  font-weight: 500;
+}
+.inp-count {
+  width: 25px;
+}
+.inp-count input {
+  width: 100%;
+  text-align: center;
+}
+.count-min,
+.count-plus {
+  margin: 0 15px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+}
+.basicCart_price {
+  color: #15ab69;
+  font-size: 18px;
+  font-weight: 500;
+}
+.basicCart_delete {
+  color: red;
+  cursor: pointer;
+
+  font-size: 18px;
+  font-weight: 500;
+}
+.gopayment {
+  color: white;
+  float: right;
+  margin: 10px 0;
+  background: #fa7400;
+  border: none;
+  width: 170px;
+  height: 30px;
+  border-radius: 2px;
+}

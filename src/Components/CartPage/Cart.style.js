@@ -43,7 +43,7 @@ export const BtnDiv = styled.div`
   justify-content: flex-end;
 `;
 export const StyledBtn = styled(StyledButton)`
-    @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 768px) {
     width: 100%;
   }
 `;
@@ -116,13 +116,13 @@ export const Quantity = styled(FlexBoxCenter)`
 `;
 export const InputNumber = styled.input`
   border: 1px solid #aaaaaa;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   width: 35px;
   height: 35px;
   ::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
-  };
+  }
   outline: none;
   text-align: center;
 `;
@@ -133,5 +133,5 @@ export const Plus = styled(BsPlus)`
 `;
 export const Minus = styled(BiMinus)`
   cursor: pointer;
-  font-size:1.4rem;
+  font-size: 1.4rem;
 `;

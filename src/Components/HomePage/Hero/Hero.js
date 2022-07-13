@@ -34,7 +34,7 @@ function Hero() {
                 data.data.map((el) => el.description)
               )}
             </StyledParagraph>
-            <StyledButton bgColor="#FFFFFF" borderRadius=".5rem">
+            <StyledButton bgColor="#FFFFFF" borderRadius=".5rem" color="#000">
               Start Shopping <FaAngleDoubleRight />
             </StyledButton>
           </FlexBoxCol>

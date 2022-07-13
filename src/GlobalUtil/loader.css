@@ -1,46 +1,88 @@
-
-.loader {
+.containerlod {
+  background-color: white;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  width: 48px;
-  height: 40px;
-  margin-top: 30px;
-  position: relative;
-  background: #FFF;
-  border-radius: 15% 15% 35% 35%;
+  gap: 20px;
+  overflow: hidden;
+  z-index: 999;
 }
-.loader::after {
-  content: '';  
-  box-sizing: border-box;
-  position: absolute;
-  left: 45px;
-  top: 8px;
-  border: 4px solid #FFF;
-  width: 16px;
-  height: 20px;
-  border-radius: 0 4px 4px 0;
+.loader {
+  transform: rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  color: rgb(0, 0, 0);
 }
-.loader::before {
-  content: '';  
+.loader:before,
+.loader:after {
+  content: "";
+  display: block;
   position: absolute;
-  width: 1px;
-  height: 10px;
-  color: #FFF;
-  top: -15px;
-  left: 11px;
-  box-sizing: border-box;
-  animation: animloader 1s ease infinite;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  transform: rotateX(70deg);
+  animation: 1s spin linear infinite;
+}
+.loader:after {
+  color: #ff3d00;
+  transform: rotateY(70deg);
+  animation-delay: 0.4s;
 }
 
-@keyframes animloader {
-    0% {
-  box-shadow: 2px 0px rgba(255, 255, 255, 0), 12px 0px rgba(255, 255, 255, 0.3), 20px 0px rgba(255, 255, 255, 0);
-}
-    50% {
-  box-shadow: 2px -5px rgba(255, 255, 255, 0.5), 12px -3px rgba(255, 255, 255, 0.5), 20px -2px rgba(255, 255, 255, 0.6);
-}
-    100% {
-  box-shadow: 2px -8px rgba(255, 255, 255, 0), 12px -5px rgba(255, 255, 255, 0), 20px -5px rgba(255, 255, 255, 0);
-}
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
   }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: 0.2em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: 0.2em 0.2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 0.2em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -0.2em 0.2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -0.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -0.2em -0.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -0.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: 0.2em -0.2em 0 0 currentcolor;
+  }
+}

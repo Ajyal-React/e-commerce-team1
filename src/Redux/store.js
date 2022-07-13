@@ -1,9 +1,10 @@
-import { createStore, combineReducers, applyMiddleware,compose } from "redux";
+import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import { HeroReducer } from "./products/reducers/HeroReduc";
 import { FeaturedRed } from "./products/reducers/featured-categ-red";
 import { userReducer } from "./user/reducers";
 import { TrendingRed } from "./products/reducers/Trending-Red";
+import { DetailsRed } from "./products/reducers/Details-Red";
 import { productReducer } from "./products/reducers/productReducer";
 
 const allReducers = combineReducers({
@@ -11,7 +12,8 @@ const allReducers = combineReducers({
   Hero: HeroReducer,
   Featured: FeaturedRed,
   Trending: TrendingRed,
-  productReducer: productReducer
+  Details: DetailsRed,
+  productReducer: productReducer,
 });
 
 const initialStore = {

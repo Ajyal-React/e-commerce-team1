@@ -37,9 +37,9 @@ const LaptopsPage = () => {
       <StyledSubHeading fontSize="26px">FEATURED CATEGORIES</StyledSubHeading>
 
       <FlexBoxWrap>
-        {laptops.map((element) => {
+        {laptops.map((element, index) => {
           return (
-            <CategoriesCard>
+            <CategoriesCard key={index}>
               <ImgDiv>
                 <Image src={element.images[0]} />
               </ImgDiv>
