@@ -24,7 +24,9 @@ const UserInfo = () => {
           <ContactDetails>
             <ContactDetailsInner>
               <FaUserAlt size={"20px"} color="#A1A9B7" />
-              <StyledParagraph fontWeight="bold" fontSize="14px">User Name</StyledParagraph>
+              <StyledParagraph fontWeight="bold" fontSize="14px">
+                User Name
+              </StyledParagraph>
               <StyledParagraph fontSize="14px">Mahmoud Hammad</StyledParagraph>
             </ContactDetailsInner>
             <ContactDetailsInner>
@@ -36,14 +38,18 @@ const UserInfo = () => {
           <ContactDetails>
             <ContactDetailsInner>
               <FaEnvelope size={"20px"} color="#A1A9B7" />
-              <StyledParagraph fontWeight="bold" fontSize="14px">Address</StyledParagraph>
+              <StyledParagraph fontWeight="bold" fontSize="14px">
+                Address
+              </StyledParagraph>
               <StyledParagraph fontSize="14px">
                 Mahmoud@Hammad.com
               </StyledParagraph>
             </ContactDetailsInner>
             <ContactDetailsInner>
               <MdCall size={"20px"} color="#A1A9B7" />
-              <StyledParagraph fontWeight="bold" fontSize="14px">Cell-Phone</StyledParagraph>
+              <StyledParagraph fontWeight="bold" fontSize="14px">
+                Cell-Phone
+              </StyledParagraph>
               <StyledParagraph fontSize="14px">Mahmoud Hammad</StyledParagraph>
             </ContactDetailsInner>
           </ContactDetails>

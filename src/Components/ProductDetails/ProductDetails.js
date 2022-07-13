@@ -15,9 +15,7 @@ function ProductDetails() {
   }
 
   let { id } = useParams();
-  function simulateClick(e) {
-    e.click();
-  }
+
   useEffect(() => {
     dispatch(DetailsAct(id));
   }, []);
@@ -32,12 +30,15 @@ function ProductDetails() {
         <div className="cont-cars">
           <div className="sec-lef">
             <div className="specImg">
-              <img src={data} className="sImg" />
+              <img
+                src={data ? data : `${datas?.data.images?.[0]}`}
+                className="sImg"
+              />
             </div>
             <div className="smlImg">
-              {datas?.data?.images?.map((el) => (
+              {datas?.data?.images?.map((el, index) => (
                 <>
-                  <div className="smImg">
+                  <div className="smImg" key={index}>
                     <img
                       src={el}
                       width="110px"

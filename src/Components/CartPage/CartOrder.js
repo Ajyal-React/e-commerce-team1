@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import {
   Order,
   RightSection,
@@ -10,7 +10,7 @@ import {
   Quantity,
   InputNumber,
   Plus,
-  Minus
+  Minus,
 } from "./Cart.style";
 import { StyledParagraph } from "../../Global.Style";
 
@@ -20,7 +20,7 @@ function CartOrder() {
     setQuantity(quantity + 1);
   };
   const handleDecreaseQuantity = () => {
-    setQuantity(quantity - 1);;
+    setQuantity(quantity - 1);
   };
   return (
     <Order>
@@ -32,9 +32,9 @@ function CartOrder() {
           <ControlDiv>
             <StyledParagraph>Laptop Bag</StyledParagraph>
             <Quantity>
-              <Plus onClick={handleIncreaseQuantity}/>
-              <InputNumber type={"number"} value={quantity}/>
-              <Minus onClick={handleDecreaseQuantity}/>
+              <Plus onClick={handleIncreaseQuantity} />
+              <InputNumber type={"number"} value={quantity} />
+              <Minus onClick={handleDecreaseQuantity} />
             </Quantity>
           </ControlDiv>
         </OrderDetails>

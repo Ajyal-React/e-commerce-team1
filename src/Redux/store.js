@@ -1,4 +1,4 @@
-import { createStore, combineReducers, applyMiddleware,compose } from "redux";
+import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import { HeroReducer } from "./products/reducers/HeroReduc";
 import { FeaturedRed } from "./products/reducers/featured-categ-red";
@@ -9,14 +9,12 @@ import { productReducer } from "./products/reducers/productReducer";
 
 const allReducers = combineReducers({
   user: userReducer,
-  Hero : HeroReducer,
-  Featured : FeaturedRed,
-  Trending : TrendingRed,
-  Details : DetailsRed,
-  productReducer: productReducer
-
+  Hero: HeroReducer,
+  Featured: FeaturedRed,
+  Trending: TrendingRed,
+  Details: DetailsRed,
+  productReducer: productReducer,
 });
-
 
 const initialStore = {
   user: JSON.parse(localStorage.getItem("user")) || {},

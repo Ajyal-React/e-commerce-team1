@@ -1,81 +1,80 @@
-.specImg{
-    height: 330px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 9px;
-    border: 0.30000001192092896px solid  #00000029;;
+.specImg {
+  height: 330px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9px;
+  border: 0.30000001192092896px solid #00000029;
 }
-.sImg{
-   height: 220px;
-   width: 220px;
-    }
-    .smlImg{
-        display: flex;
-        justify-content: space-between;
-        margin: 10px 0 ;        
-    }
-    .smImg{
-        width: 100px;
-        height: 100px;
-        border-radius: 9px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 0.30000001192092896px solid  #00000029;
-        margin: 0 5px;
-    }
-    .cont-cars{
-            display: flex;
-            flex-direction: row;
-            margin-top: 100px;
-            gap: 50px;
-            
-    }
-    .seSection{
-        width: 40%;
-    }
-    .sec-lef{
-        width: 50%;
-    }
-select{
-    width: 100%;
-    height: 40px;
-    margin: 10px  0; 
-    background-color: #F4F4F4;
-    border: 0.5px solid #F4F4F4;
-    border-radius: 4px;
+.sImg {
+  height: 220px;
+  width: 220px;
 }
-.butn{
-    background-color: #FA7400;
-    color: white;
-    width: 100%;
-    border: none;
-    height: 40px;
-    border-radius: 4px;
-    cursor: pointer;
+.smlImg {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
 }
-.mt-5{
-    margin:10px ;
-    color: #9B9A9A;
+.smImg {
+  width: 100px;
+  height: 100px;
+  border-radius: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.30000001192092896px solid #00000029;
+  margin: 0 5px;
 }
-.prices{
-    color: #FA7400;
-    font-size: 20px;
-    font-weight: 700;
+.cont-cars {
+  display: flex;
+  flex-direction: row;
+  margin-top: 100px;
+  gap: 50px;
 }
-.Available{
-    color: #0EA965;
-    font-weight: 700;
+.seSection {
+  width: 40%;
 }
-.amg{
-    margin: 10px 0 ;
+.sec-lef {
+  width: 50%;
 }
-.color-details{
-    height: 28px ; 
-    width: 30px;
-    margin: 10px 0 ;
+select {
+  width: 100%;
+  height: 40px;
+  margin: 10px 0;
+  background-color: #f4f4f4;
+  border: 0.5px solid #f4f4f4;
+  border-radius: 4px;
 }
-.container-color-details{
-    display: flex;
+.butn {
+  background-color: #fa7400;
+  color: white;
+  width: 100%;
+  border: none;
+  height: 40px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.mt-5 {
+  margin: 10px;
+  color: #9b9a9a;
+}
+.prices {
+  color: #fa7400;
+  font-size: 20px;
+  font-weight: 700;
+}
+.Available {
+  color: #0ea965;
+  font-weight: 700;
+}
+.amg {
+  margin: 10px 0;
+}
+.color-details {
+  height: 28px;
+  width: 30px;
+  margin: 10px 0;
+}
+.container-color-details {
+  display: flex;
 }

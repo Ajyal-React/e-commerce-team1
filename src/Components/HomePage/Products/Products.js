@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useEffect } from "react";
+
 import {
   Container,
   StyledSubHeading,
@@ -57,13 +57,12 @@ const Products = () => {
               />
             </SwiperSlide>
           ))}
-                  console.log(featured);
-
+          console.log(featured);
         </div>
       </Swiper>
 
       <div className="bottom-sec">
-        <StyledButton borderRadius=".4rem" bgColor="transparent">
+        <StyledButton borderRadius=".4rem" bgColor="transparent" color="#000">
           View More
         </StyledButton>
       </div>
