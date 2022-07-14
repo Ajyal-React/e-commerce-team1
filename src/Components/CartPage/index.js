@@ -8,6 +8,7 @@ import {
   OrdersSection,
   StyledBtn,
 } from "./Cart.style";
+import { Link } from "react-router-dom";
 import { HiOutlineArrowNarrowLeft } from "react-icons/hi";
 import { StyledParagraph } from "../../Global.Style";
 import CartOrder from "./CartOrder";
@@ -29,7 +30,9 @@ function Cart() {
         </OrdersSection>
 
         <BtnDiv>
-          <StyledBtn bgColor="#fa7400">Go to payment</StyledBtn>
+          <Link to="/payment">
+            <StyledBtn bgColor="#fa7400">Go to payment</StyledBtn>
+          </Link>
         </BtnDiv>
       </OrdersContainer>
     </MainSection>
