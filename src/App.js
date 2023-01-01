@@ -19,29 +19,28 @@ import CartPage from "./Pages/CartPage";
 import PaymentPage from "./Components/PaymentPage";
 function App() {
   return (
-    // <Router>
-    //   <div className="App">
-    //     <Routes>
-    //       <Route path="/" element={<Home />} />
-    //       <Route path="/signup" element={<SignUp />} />
-    //       <Route path="/login" element={<LOGIN />} />
-    //       <Route path="/details/:id" element={<Details />} />
-    //       <Route path="/laptops" element={<Laptops />} />
-    //       <Route path="/cart" element={<CartPage />} />
-    //       <Route path="*" element={<Error />} />
-    //       <Route path="/details" element={<Details />} />
-    //       <Route path="/profile" element={<UserProfile />}>
-    //         <Route path="myorders" element={<UserOrders />} />
-    //         <Route path="wishlist" element={<UserWishlist />} />
-    //         <Route path="notifications" element={<UserNotifications />} />
-    //         <Route path="settings" element={<UserSettings />} />
-    //       </Route>
-    //       <Route path="/mycart" element={<Cart />} />
-    //       <Route path="/payment" element={<Payment />} />
-    //     </Routes>
-    //   </div>
-    // </Router>
-    <PaymentPage />
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<LOGIN />} />
+          <Route path="/details/:id" element={<Details />} />
+          <Route path="/laptops" element={<Laptops />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="*" element={<Error />} />
+          <Route path="/details" element={<Details />} />
+          <Route path="/profile" element={<UserProfile />}>
+            <Route path="myorders" element={<UserOrders />} />
+            <Route path="wishlist" element={<UserWishlist />} />
+            <Route path="notifications" element={<UserNotifications />} />
+            <Route path="settings" element={<UserSettings />} />
+          </Route>
+          <Route path="/mycart" element={<Cart />} />
+          <Route path="/payment" element={<Payment />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
